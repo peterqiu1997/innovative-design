@@ -2,8 +2,9 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
 
-import $ from 'jquery';
 import _ from 'lodash';
+
+import Typing from './components/typing';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -13,45 +14,30 @@ export default class Index extends React.Component {
   componentDidMount() {}
 
   render () {
-    const data = [
-      {
-        name: 'Christian Kitty',
-        title: 'Senior Executive Advisor'
-      },
-      {
-        name: 'Julia Kitty',
-        title: 'Kitty'
-      },
-      {
-        name: 'Cow Kitty',
-        title: 'Cow'
-      },
-      {
-        name: 'Bunny Kitty',
-        title: 'Bunny'
-      }
+    const stringsToType = [
+      'Design',
+      'Graphic Design',
+      'Photography',
+      'Web Design',
+      'Videography',
+      'Design'
     ];
-
-    const peopleElements = _.map(data, (person, index) => {
-      return (
-        <div
-          key={ `personElem-${index}` }
-          className="person__wrapper"
-        >
-          <h1>
-            { person.name }
-          </h1>
-          <h3>
-            { person.title }
-          </h3>
-        </div>
-      );
-    });
 
     return (
       <DocumentTitle title="Innovative Design">
         <div>
           <div className="page__wrapper home">
+            <div className="home__container">
+              <Typing
+                defaultString="Design"
+                strings={ stringsToType }
+                interval={ { letter: 50, string: 500 } }
+                backspace={ true }
+                cursor={ '|' }
+                startDelay={ 750 }
+                hideCursorOnDone={ true }
+              />
+            </div>
           </div>
         </div>
       </DocumentTitle>

@@ -1,38 +1,38 @@
 // Navigation
 
 .nav {
-  height: $navbar-height;
-  background: $blue;
   position: fixed;
   bottom: 0px;
+  height: $navbar-height;
   width: 100%;
+  background: $blue;
 
   .nav__wrapper {
     height: 100%;
-    text-align: center;
     margin: 0 auto;
     padding: 0px;
+    text-align: center;
 
     .nav__item {
       display: inline-block;
       top: 50%;
-      transform: translateY(-50%);
       margin: 0 50px;
       color: $white;
-      text-transform: uppercase;
-      letter-spacing: 3px;
       font-family: "Raleway";
       font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      transform: translateY(-50%);
 
       &::after {
+        content: "";
         position: absolute;
         top: 115%;
         left: 50%;
-        content: "";
         height: 2px;
         width: 0;
         background: $white;
-        transition: all 250ms linear;
+        transition: all 200ms ease-in-out;
       }
 
       &:hover {

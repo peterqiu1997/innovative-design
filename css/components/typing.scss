@@ -1,0 +1,17 @@
+$s__typing--text: 48px;
+$s__typing--line: $s__typing--text * 1.5;
+
+
+.typing__container {
+  .typing__text {
+    vertical-align: middle;
+    font-size: $s__typing--text;
+    line-height: $s__typing--line;
+  }
+
+  .typing__cursor {
+    vertical-align: middle;
+    font-size: $s__typing--line;
+    line-height: $s__typing--line;
+  }
+}

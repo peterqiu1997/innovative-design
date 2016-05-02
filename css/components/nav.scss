@@ -19,7 +19,7 @@
       margin: 0 50px;
       color: $white;
       font-family: "Raleway";
-      font-size: 1.2rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 3px;
       transform: translateY(-50%);
@@ -32,7 +32,7 @@
         height: 2px;
         width: 0;
         background: $white;
-        transition: all 200ms ease-in-out;
+        transition: all 150ms ease-in-out;
       }
 
       &:hover {

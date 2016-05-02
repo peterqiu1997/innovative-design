@@ -3,24 +3,43 @@
 .home {
   height: 100vh;
   overflow-x: hidden;
-  user-select: none;
 
-  .home__container {
+  .splash__container {
     top: 30%;
-    left: 20%;
-    width: 100%;
+    width: 40%;
+    max-width: 800px;
     margin: 0 auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 
-    @media (max-width: 850px) {
-      left: 10%;
+    @media (max-width: 1440px) {
+      width: 50%;
     }
 
-    @media (max-width: 500px) {
-      left: 5%;
+    @media (max-width: 1280px) {
+      width: 60%;
+    }
+
+    @media (max-width: 1080px) {
+      width: 70%;
+    }
+
+    @media (max-width: 880px) {
+      width: 80%;
+    }
+
+    @media (max-width: 540px) {
+      width: 90%;
+    }
+
+    .logo__svg {
+      width: 100%;
+
+      .logo__svg--color {
+        fill: $blue;
+      }
     }
   }
 }

@@ -28,8 +28,8 @@ export default class Index extends React.Component {
       <DocumentTitle title="Innovative Design">
         <div>
           <div className="page__wrapper home">
-            <div className="home__container">
-              <Logo logoType={ LOGO_TEXT } logoClass={ 'logo__text' } />
+            <div className="splash__container">
+              <Logo logoType={ LOGO_TEXT } logoClass={ 'logo__svg--color' } />
               <Typing
                 defaultString="Design"
                 strings={ stringsToType }

@@ -1,0 +1,99 @@
+// Team
+
+.team {
+  margin-bottom: $navbar-height;
+
+  .section__title {
+    text-align: center;
+    margin-top: 48px;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $blue;
+  }
+
+  .officers {
+    padding: 2%;
+
+    .officer {
+      position: relative;
+      width: 23%;
+      margin-bottom: 1.5%;
+      margin-right: 2%;
+      display: inline-block;
+
+      .officer__photo {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .officer__details {
+        font-family: "Lato";
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        opacity: 0;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -ms-transform: opacity 500ms;
+        transition: opacity 500ms;
+
+        .officer__detail--name {
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+        }
+
+        .officer__detail--title {
+          font-size: 1.25rem;
+        }
+
+        .officer__detail--tier {
+          font-size: 1rem;
+        }
+      }
+
+      .officer__overlay {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: $white;
+        opacity: 0.45;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+        -o-transition: width 500ms;
+        transition: width 500ms;
+
+        &.officer__overlay--left {
+          left: 0;
+        }
+
+        &.officer__overlay--right {
+          right: 0;
+        }
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:hover {
+        .officer__details {
+          opacity: 1;
+        }
+
+        .officer__overlay {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

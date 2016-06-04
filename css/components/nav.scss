@@ -41,8 +41,35 @@
       &:hover {
         &::after {
           left: 0;
-          width: 100%;;
+          width: 100%;
         }
+      }
+
+      &.hide__first {
+        @media (max-width: 1055px) {
+          display: none;
+        }
+      }
+
+      &.hide__second {
+        @media (max-width: 865px) {
+          display: none;
+        }
+      }
+
+      &.hide__last {
+        @media (max-width: 550px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 720px) {
+        margin: 0 20px;
+      }
+
+      @media (max-width: 400px) {
+        margin: 0 15px;
+        font-size: 0.9rem;
       }
     }
   }

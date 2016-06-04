@@ -35,17 +35,17 @@ module.exports = React.createClass({
               </div>
             </a>
             <a href="/team/">
-              <div className="nav__item">
+              <div className="nav__item hide__second">
                 team
               </div>
             </a>
             <a href="/events/">
-              <div className="nav__item">
+              <div className="nav__item hide__last">
                 events
               </div>
             </a>
             <a href="/decal/">
-              <div className="nav__item">
+              <div className="nav__item hide__first">
                 decal
               </div>
             </a>

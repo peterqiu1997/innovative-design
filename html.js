@@ -54,7 +54,7 @@ module.exports = React.createClass({
             type='text/css'
           />
           <link 
-            href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900' 
+            href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700,800,900' 
             rel='stylesheet' 
             type='text/css'
           />

@@ -5,6 +5,7 @@ $s__typing--line: $s__typing--text * 1.25;
   width: 250%;
   font-size: 0;
   font-family: "Raleway";
+  font-weight: 200;
   text-transform: uppercase;
   color: $blue;
 
@@ -15,27 +16,27 @@ $s__typing--line: $s__typing--text * 1.25;
     line-height: $s__typing--line;
     letter-spacing: 2rem;
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1200px) {
       margin-left: -5px;
       font-size: 3.5rem;
       line-height: 4.3rem;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 1110px) {
       margin-left: -4px;
       font-size: 3rem;
       line-height: 3.75rem;
       letter-spacing: 1.5rem;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 800px) {
       margin-left: -3px;
       font-size: 2.5rem;
       line-height: 3.125rem;
       letter-spacing: 1rem;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 610px) {
       font-size: 2rem;
       line-height: 2.5rem;
       letter-spacing: 6px;

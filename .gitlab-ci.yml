@@ -1,5 +1,7 @@
 pages:
     stage: deploy
+    script:
+    - cp -rf public/ gitlab/
     artifacts:
         paths:
         - public

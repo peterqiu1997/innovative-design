@@ -24,32 +24,32 @@ module.exports = React.createClass({
         </div>
         <div className="nav">
           <div className="nav__wrapper">
-            <a href="/">
+            <a href={ prefixLink('/') }>
               <div className="nav__item">
                 home
               </div>
             </a>
-            <a href="/about/">
+            <a href={ prefixLink('/about/') }>
               <div className="nav__item">
                 about
               </div>
             </a>
-            <a href="/team/">
+            <a href={ prefixLink('/team/') }>
               <div className="nav__item hide__second">
                 team
               </div>
             </a>
-            <a href="/events/">
+            <a href={ prefixLink('/events/') }>
               <div className="nav__item hide__last">
                 events
               </div>
             </a>
-            <a href="/decal/">
+            <a href={ prefixLink('/decal/') }>
               <div className="nav__item hide__first">
                 decal
               </div>
             </a>
-            <a href="/contact/">
+            <a href={ prefixLink('/contact/') }>
               <div className="nav__item">
                 contact
               </div>

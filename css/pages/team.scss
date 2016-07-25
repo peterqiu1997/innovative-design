@@ -17,7 +17,7 @@
 
     .officer {
       position: relative;
-      width: 23%;
+      width: 23.5%;
       margin-bottom: 1.5%;
       margin-right: 2%;
       display: inline-block;
@@ -50,14 +50,26 @@
           font-size: 1.5rem;
           margin-bottom: 5px;
           text-transform: uppercase;
+
+          @media (max-width: 770px) {
+            font-size: 1.25rem;
+          }
         }
 
         .officer__detail--title {
           font-size: 1.25rem;
+
+          @media (max-width: 770px) {
+            font-size: 1rem;
+          }
         }
 
         .officer__detail--tier {
           font-size: 1rem;
+
+          @media (max-width: 770px) {
+            font-size: 0.75rem;
+          }
         }
       }
 
@@ -93,6 +105,30 @@
 
         .officer__overlay {
           width: 100%;
+        }
+      }
+
+      @media (max-width: 1040px) {
+        width: 32%;
+
+        &:nth-child(4n) {
+          margin-right: 2%;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 650px) {
+        width: 49%;
+
+        &:nth-child(3n) {
+          margin-right: 2%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
         }
       }
     }

@@ -23,10 +23,26 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       transform: translateY(-50%);
-      transition: color 200ms ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 115%;
+        left: 50%;
+        height: 2px;
+        width: 0;
+        background: $white;
+        -webkit-transition: all 150ms ease-in-out;
+        -moz-transition: all 150ms ease-in-out;
+        -ms-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+      }
 
       &:hover {
-        color: $light-grey;
+        &::after {
+          left: 0;
+          width: 100%;
+        }
       }
 
       &.hide__first {

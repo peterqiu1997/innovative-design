@@ -40,6 +40,13 @@ export default class Index extends React.Component {
                 hideCursorOnDone={ true }
               />
             </div>
+            <div className="apply__wrapper">
+              <a href="http://apply.innovativedesign.club">
+                <button className="apply__button">
+                  Fall 2016 Recruitment
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </DocumentTitle>

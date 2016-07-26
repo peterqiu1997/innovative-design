@@ -15,25 +15,8 @@ module.exports = React.createClass({
   },
 
   componentDidMount() {
-    var touch = window.ontouchstart
-      || (navigator.MaxTouchPoints > 0)
-      || (navigator.msMaxTouchPoints > 0);
-
-    if (touch) { // remove all :hover stylesheets
-      try { // prevent exception on browsers not supporting DOM styleSheets properly
-        for (var si in document.styleSheets) {
-          var styleSheet = document.styleSheets[si];
-          if (!styleSheet.rules) continue;
-
-          for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-            if (!styleSheet.rules[ri].selectorText) continue;
-
-            if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                styleSheet.deleteRule(ri);
-            }
-          }
-        }
-      } catch (ex) {}
+    if (!("ontouchstart" in document.documentElement)) {
+      document.documentElement.className += "no-touch";
     }
   },
 
@@ -46,32 +29,32 @@ module.exports = React.createClass({
         <div className="nav">
           <div className="nav__wrapper">
             <a href={ prefixLink('/') }>
-              <div className="nav__item">
+              <div className="nav__item no-touch">
                 home
               </div>
             </a>
             <a href={ prefixLink('/about/') }>
-              <div className="nav__item">
+              <div className="nav__item no-touch">
                 about
               </div>
             </a>
             <a href={ prefixLink('/team/') }>
-              <div className="nav__item hide__second">
+              <div className="nav__item no-touch hide__second">
                 team
               </div>
             </a>
             <a href={ prefixLink('/events/') }>
-              <div className="nav__item hide__last">
+              <div className="nav__item no-touch hide__last">
                 events
               </div>
             </a>
             <a href={ prefixLink('/decal/') }>
-              <div className="nav__item hide__first">
+              <div className="nav__item no-touch hide__first">
                 decal
               </div>
             </a>
             <a href={ prefixLink('/contact/') }>
-              <div className="nav__item">
+              <div className="nav__item no-touch">
                 contact
               </div>
             </a>

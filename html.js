@@ -59,7 +59,7 @@ module.exports = React.createClass({
             type='text/css'
           />
           <link 
-            href='https://fonts.googleapis.com/css?family=Montserrat' 
+            href='https://fonts.googleapis.com/css?family=Montserrat:100' 
             rel='stylesheet' 
             type='text/css'
           />

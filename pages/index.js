@@ -43,7 +43,7 @@ export default class Index extends React.Component {
             <div className="apply__wrapper">
               <a href="http://apply.innovativedesign.club">
                 <button className="apply__button">
-                  Fall 2016 Recruitment
+                  Join Our Team
                 </button>
               </a>
             </div>

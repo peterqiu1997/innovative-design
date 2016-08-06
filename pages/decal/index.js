@@ -16,8 +16,8 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title="Innovative Design">
         <div>
-          <div className="page__wrapper about">
-            decal page
+          <div className="page__wrapper decal">
+            <h1 className="section__title">intro to photoshop and illustrator decal</h1>
           </div>
         </div>
       </DocumentTitle>

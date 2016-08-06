@@ -53,9 +53,9 @@ module.exports = React.createClass({
                 decal
               </div>
             </a>
-            <a href={ prefixLink('/contact/') }>
+            <a href={ prefixLink('/requests/') }>
               <div className="nav__item no-touch">
-                contact
+                requests
               </div>
             </a>
           </div>

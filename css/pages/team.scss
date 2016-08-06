@@ -3,15 +3,6 @@
 .team {
   margin-bottom: $navbar-height;
 
-  .section__title {
-    text-align: center;
-    margin-top: 48px;
-    font-family: 'Raleway';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $blue;
-  }
-
   .officers {
     padding: 2%;
 
@@ -98,7 +89,7 @@
         margin-right: 0;
       }
 
-      &:hover {
+      &:hover, &:active {
         .officer__details {
           opacity: 1;
         }

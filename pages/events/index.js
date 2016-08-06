@@ -16,8 +16,8 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title="Innovative Design">
         <div>
-          <div className="page__wrapper about">
-            events page
+          <div className="page__wrapper events">
+            <h1 className="section__title">upcoming events</h1>
           </div>
         </div>
       </DocumentTitle>

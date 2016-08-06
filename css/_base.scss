@@ -42,3 +42,14 @@
   -ms-animation: blink 0.3s ease-in-out infinite alternate;
   animation: blink 0.3s ease-in-out infinite alternate;
 }
+
+.page__wrapper {  
+  .section__title {
+    text-align: center;
+    margin-top: 48px;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $blue;
+  }
+}

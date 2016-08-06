@@ -58,11 +58,6 @@ module.exports = React.createClass({
             rel='stylesheet' 
             type='text/css'
           />
-          <link 
-            href='https://fonts.googleapis.com/css?family=Montserrat:100' 
-            rel='stylesheet' 
-            type='text/css'
-          />
           <link
             href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic'
             rel='stylesheet'

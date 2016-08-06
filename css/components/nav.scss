@@ -23,6 +23,7 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       transform: translateY(-50%);
+      transition: color 200ms ease-in-out;
 
       &::after {
         content: "";
@@ -39,10 +40,11 @@
       }
 
       &:hover {
-        &::after {
-          left: 0;
-          width: 100%;
-        }
+        color: $light-grey;
+        // &::after {
+        //   left: 0;
+        //   width: 100%;
+        // }
       }
 
       &.hide__first {

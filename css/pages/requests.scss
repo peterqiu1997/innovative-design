@@ -1,0 +1,72 @@
+.requests {
+  .request__info {
+    font-family: 'Raleway';
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .submit__loader {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate;
+    position: relative;
+    top: 6px;
+  }
+
+  @-webkit-keyframes typing {
+    0% {
+      background-color: rgba(6,147,192, 1);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    25% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    75% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,1);
+    }
+  }
+
+  @-moz-keyframes typing {
+    0% {
+      background-color: rgba(6,147,192, 1);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    25% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    75% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,1);
+    }
+  }
+
+  @keyframes typing {
+    0% {
+      background-color: rgba(6,147,192, 1);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    25% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,2), 
+                  24px 0px 0px 0px rgba(6,147,192,0.2);
+    }
+    75% { 
+      background-color: rgba(6,147,192, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(6,147,192,0.2), 
+                  24px 0px 0px 0px rgba(6,147,192,1);
+    }
+  }
+}

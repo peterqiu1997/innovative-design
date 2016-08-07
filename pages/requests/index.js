@@ -1,41 +1,284 @@
 import React from 'react';
+import classNames from 'classnames';
 import Datepicker from 'react-datepicker';
 import DocumentTitle from 'react-document-title';
+import Dropdown from 'react-dropdown';
+import MaskedInput from 'react-maskedinput';
 import moment from 'moment';
+import Request from 'axios';
+
 import { prefixLink } from 'gatsby-helpers';
 
 import $ from 'jquery';
 import _ from 'lodash';
 
-require('react-datepicker/dist/react-datepicker.css');
+const campusTypes = [
+  'On campus, as a registered student organization',
+  'On campus, as a university program',
+  'Off campus'
+];
+
+const projectTypes = [
+  'Graphic Design',
+  'Photography',
+  'Videography',
+  'Web Design'
+];
+
+function submissionIsValid(properties) {
+  const values = _.values(_.remove(properties, 'questions'));
+  return _.every(values, Boolean);
+}
 
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
 
+    this._generateUnsentFormBodyMarkup = this._generateUnsentFormBodyMarkup.bind(this);
+
+    this._handlePhoneChange = this._handlePhoneChange.bind(this);
+    this._handleCampusChange = this._handleCampusChange.bind(this);
+    this._handleProjectTypeChange = this._handleProjectTypeChange.bind(this);
     this._handleDateChange = this._handleDateChange.bind(this);
+    this._checkValidSubmission = this._checkValidSubmission.bind(this);
+
     this._handleSubmit = this._handleSubmit.bind(this);
     this._handleSubmissionError = this._handleSubmissionError.bind(this);
     this._handleSubmissionSuccess = this._handleSubmissionSuccess.bind(this);
 
     this.state = {
+      canSend: submissionIsValid({
+        name: ''
+      }),
+      enteredPhone: null,
       selectedDate: null,
       sending: false,
       sent: false,
       sentError: null,
-      request: {
-        campus: 'campus__title',
-        type: 'project__title'
-      }
+      selectedCampusType: null,
+      selectedProjectType: null,
+      request: {}
     };
+  }
+
+  _generateUnsentFormBodyMarkup() {
+    const dateProps = {
+      minDate: moment().add(3, 'w'),
+      selected: this.state.selectedDate,
+      onChange: this._handleDateChange
+    };
+
+    const formButton = !this.state.sending ? (
+      <div
+        className={
+          classNames('button__wrapper', {
+            disabled: !this.state.canSend
+          })
+        }
+      >
+        <button id="form__submit" type="submit">
+          submit
+        </button>
+      </div>
+    ) : (
+      <div className="button__wrapper">
+        <div className="submit__loader"></div>
+      </div>
+    );
+
+    return (
+      <form id="request-form" onSubmit={this._handleSubmit}>
+        <div className="input__container input__container--half">
+          <input
+            ref="name"
+            id="name"
+            name="name"
+            defaultValue={this.state.request.name}
+            onChange={this._checkValidSubmission}
+            required
+          />
+          <label htmlFor="name">Name</label>
+        </div>
+        <div className="input__container input__container--half last">
+          <input
+            ref="email"
+            type="email"
+            id="email"
+            name="email"
+            defaultValue={this.state.request.email}
+            onChange={this._checkValidSubmission}
+            required
+          />
+          <label htmlFor="email">Email</label>
+        </div>
+        <div className="input__container input__container--half">
+          <MaskedInput id="phone" mask="(111) 111-1111" name="phone" onChange={this._handlePhoneChange}/>
+          <label htmlFor="phone">Phone</label>
+        </div>
+        <div className="input__container input__container--half last">
+          <input
+            ref="organization"
+            type="organization"
+            id="organization"
+            name="organization"
+            defaultValue={this.state.request.organization}
+            onChange={this._checkValidSubmission}
+            required
+          />
+          <label htmlFor="organization">Organization</label>
+        </div>
+        <div className="input__container">
+          <textarea
+            ref="description"
+            name="description"
+            id="description"
+            defaultValue={this.state.request.description}
+            onChange={this._checkValidSubmission}
+            required
+          ></textarea>
+          <label htmlFor="description">Organization Description</label>
+        </div>
+        <div className="input__container input__container--half">
+          <Dropdown
+            options={campusTypes}
+            onChange={this._handleCampusChange}
+            value={this.state.selectedCampusType}
+            placeholder="On or Off Campus Organization"
+          />
+        </div>
+        <div className="input__container input__container--half last">
+          <Dropdown
+            options={projectTypes}
+            onChange={this._handleProjectTypeChange}
+            value={this.state.selectedProjectType}
+            placeholder="Project Type"
+          />
+        </div>
+        <div className="input__container input__container--half">
+          <Datepicker name="deadline" {...dateProps} placeholderText="deadline" id="deadline" />
+        </div>
+        <div className="input__container">
+          <textarea
+            ref="project"
+            name="project"
+            id="project"
+            defaultValue={this.state.request.project}
+            onChange={this._checkValidSubmission}
+            required
+          ></textarea>
+          <label htmlFor="project">Project Description</label>
+        </div>
+        <div className="input__container">
+          <textarea
+            ref="questions"
+            name="questions"
+            id="questions"
+            defaultValue={this.state.request.questions}
+            onChange={this._checkValidSubmission}
+          ></textarea>
+          <label htmlFor="questions">Additional Information</label>
+        </div>
+
+        { formButton }
+      </form>
+    );
+  };
+
+  _checkValidSubmission() {
+    let testPayload = {
+      name: this.refs.name.value,
+      email: this.refs.email.value,
+      phone: this.state.enteredPhone,
+      organization: this.refs.organization.value,
+      description: this.refs.description.value,
+      campus: this.state.selectedCampusType,
+      type: this.state.selectedProjectType,
+      project: this.refs.project.value,
+      questions: this.refs.questions.value
+    };
+
+    if (!this.state.selectedDate) {
+      testPayload.deadline = null;
+    } else {
+      testPayload.deadline = this.state.selectedDate.format("MM/DD/YYYY");
+    }
+
+    this.setState({
+      canSend: submissionIsValid(testPayload)
+    });
+  }
+
+  _handlePhoneChange(e) {
+    this.setState({
+      enteredPhone: e.target.value
+    });
+  }
+
+  _handleCampusChange(campus) {
+    this.setState({
+      selectedCampusType: campus.value
+    });
+  }
+
+  _handleProjectTypeChange(type) {
+    this.setState({
+      selectedProjectType: type.value
+    });
+  }
+
+  _handleDateChange(date) {
+    this.setState({
+      selectedDate: date
+    });
+  }
+
+  _handleSubmit(e) {
+    e.preventDefault();
+
+    const jsonPayload = {
+      name: this.refs.name.value,
+      email: this.refs.email.value,
+      phone: this.state.enteredPhone,
+      organization: this.refs.organization.value,
+      description: this.refs.description.value,
+      campus: this.state.selectedCampusType,
+      type: this.state.selectedProjectType,
+      deadline: this.state.selectedDate.format("MM/DD/YYYY"),
+      project: this.refs.project.value,
+      questions: this.refs.questions.value
+    };
+
+    console.log(jsonPayload);
+
+    if (!submissionIsValid(jsonPayload)) {
+      return;
+    }
+
+    this.setState({
+      sending: true,
+      request: jsonPayload
+    });
+
+    Request.post('https://innovativedesign-api.appspot.com/request', jsonPayload, {
+      headers: {
+        'X-Api-Version': 'kitty/v1'
+      }
+    }).then((response) => {
+      this._handleSubmissionSuccess();
+    }).catch((error) => {
+      this._handleSubmissionError(error);
+    });
   }
 
   _handleSubmissionError(error) {
     console.error(error.responseJSON); // {error, message, statusCode}
+
     this.setState({
       sent: true,
       sending: false,
-      sentError: error.responseJSON // Error,
+      sentError: {
+        message: "Sorry we couldn't process your request. Please try again."
+      }
     });
 
     $('html, body').animate({
@@ -51,74 +294,18 @@ export default class Index extends React.Component {
     });
   }
 
-  _handleSubmit(e) {
-    e.preventDefault();
-
-    const jsonPayload = {
-      name: this.refs.name.value,
-      email: this.refs.email.value,
-      phone: this.refs.phone.value,
-      organization: this.refs.organization.value,
-      description: this.refs.description.value,
-      campus: this.refs.campus.value,
-      type: this.refs.type.value,
-      deadline: this.state.selectedDate.format("MM/DD/YYYY"),
-      project: this.refs.project.value,
-      questions: this.refs.questions.value
-    };
-
-    console.log(jsonPayload);
-
-    this.setState({
-      sending: true,
-      request: jsonPayload
-    });
-
-    // $.ajax({
-    //   url: '',
-    //   type: 'POST',
-    //   headers: {
-    //     "X-API-Version": "kitty/v1"
-    //   },
-    //   contentType: 'application/json',
-    //   data: jsonPayload,
-    //   success: this._handleSubmissionSuccess,
-    //   error: this._handleSubmissionError
-    // });
-
-    setTimeout(() => {
-      this._handleSubmissionError({
-        responseJSON: {
-          message: "There was an error processing your request."
-        }
-      });
-    }, 2000);
-  }
-
-  _handleDateChange(date) {
-    this.setState({
-      selectedDate: date
-    });
-  }
-
   componentDidMount() {}
 
   render () {
-    const dateProps = {
-      minDate: moment().add(3, 'w'),
-      selected: this.state.selectedDate,
-      onChange: this._handleDateChange
-    };
-
     const sentMsgBody = (
       <div className="sent__message">
         <p>
-          Your request is currently being delivered by a group of avocado enthusiasts. 
-          An officer should be reaching out to you in a couple days to discuss the details of the project. 
+          Your request is currently being delivered by a group of avocado enthusiasts.
+          An officer should be reaching out to you in a couple days to discuss the details of the project.
         </p>
         <p>
-          Feel free to reach out to 
-          <a href="mailto:innovativedesignatcal@gmail.com">innovativedesignatcal@gmail.com</a> 
+          Feel free to reach out to
+          <a href="mailto:innovativedesignatcal@gmail.com">innovativedesignatcal@gmail.com</a>
           with additional questions.
         </p>
       </div>
@@ -126,142 +313,21 @@ export default class Index extends React.Component {
 
     var formBody;
 
-    console.log(this.state);
-
-    const generateUnsentFormBodyMarkup = () => {
-      const formButton = !this.state.sending ? (
-        <div className="button__wrapper">
-          <button id="form__submit" type="submit">
-            submit
-          </button>
-        </div>
-      ) : (
-        <div className="button__wrapper">
-          <div className="submit__loader"></div>
-        </div>
-      );
-
-      return (
-        <form id="request-form" onSubmit={ this._handleSubmit }>
-          <div className="input__container">
-            <input
-              ref="name"
-              id="name"
-              name="name"
-              defaultValue={ this.state.request.name }
-              required
-            />
-            <label htmlFor="name">Name</label>
-          </div>
-          <div className="input__container">
-            <input
-              ref="email"
-              type="email"
-              id="email"
-              name="email"
-              defaultValue={ this.state.request.email }
-              required
-            />
-            <label htmlFor="email">Email</label>
-          </div>
-          <div className="input__container">
-            <input
-              ref="phone"
-              type="phone"
-              id="phone"
-              name="phone"
-              defaultValue={ this.state.request.phone }
-              required
-            />
-            <label htmlFor="phone">Phone</label>
-          </div>
-          <div className="input__container">
-            <input
-              ref="organization"
-              type="organization"
-              id="organization"
-              name="organization"
-              defaultValue={ this.state.request.organization }
-              required
-            />
-            <label htmlFor="organization">Organization</label>
-          </div>
-          <div className="input__container">
-            <textarea
-              ref="description"
-              name="description"
-              id="description"
-              defaultValue={ this.state.request.description }
-              required
-            ></textarea>
-            <label htmlFor="description">Organization Description</label>
-          </div>
-          <div className="dropdown__wrapper">
-            <select
-              ref="campus"
-              name="campus"
-              id="campus"
-              defaultValue={ this.state.request.campus }
-              required
-            >
-              <option value="campus__title" disabled>Are you on or off campus?</option>
-              <option value="on-campus-registered">
-                On campus, as a registered student organization
-              </option>
-              <option value="on-campus-university">On campus, as a university program</option>
-              <option value="off-campus">Off campus</option>
-            </select>
-          </div>
-          <div className="dropdown__wrapper">
-            <select
-              ref="type"
-              name="type"
-              id="type"
-              defaultValue={ this.state.request.type }
-              required
-            >
-              <option value="project__title" disabled>Project Type</option>
-              <option value="photo">Photography</option>
-              <option value="video">Videography</option>
-              <option value="web">Web Design</option>
-              <option value="graphic">Graphic Design</option>
-            </select>
-          </div>
-          <div className="input__container">
-            <Datepicker name="deadline" {...dateProps} placeholderText="deadline" id="deadline" />
-          </div>
-          <div className="input__container">
-            <textarea
-              ref="project"
-              name="project"
-              id="project"
-              defaultValue={ this.state.request.project }
-              required
-            ></textarea>
-            <label htmlFor="project">Project Description</label>
-          </div>
-          <div className="input__container">
-            <textarea
-              ref="questions"
-              name="questions"
-              id="questions"
-              defaultValue={ this.state.request.questions }
-            ></textarea>
-            <label htmlFor="questions">Additional Information</label>
-          </div>
-
-          { formButton }
-        </form>
-      );
-    };
-
     if (this.state.sent && !this.state.sentError) {
       formBody = sentMsgBody;
     } else {
-      formBody = generateUnsentFormBodyMarkup();
+      formBody = this._generateUnsentFormBodyMarkup();
     }
 
-    const errorBody = this.state.sentError ? (<div>{ this.state.sentError.message }</div>) : null;
+    const errorBody = this.state.sentError ? (
+      <div
+        style={{
+          textAlign: 'center'
+        }}
+      >
+        { this.state.sentError.message }
+      </div>
+    ) : null;
 
     return (
       <DocumentTitle title="Innovative Design">
@@ -269,7 +335,12 @@ export default class Index extends React.Component {
           <div className="page__wrapper requests">
             <h1 className="section__title">design requests</h1>
             <div className="page__wrapper requests">
-              <div className="request__info">
+              <div
+                className="request__info"
+                style={{
+                  display: this.state.sent && !this.state.sentError ? "none" : "block"
+                }}
+              >
                 Please submit design requests through the form below.
               </div>
               <div className="request__form">

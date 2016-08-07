@@ -11,6 +11,25 @@
   }
 
   .request__form {
+
+    .sent__message {
+      font-family: 'Lato';
+      font-weight: 400;
+      font-size: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+
+      .thanks {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      a {
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+
     .input__container {
       margin: 20px 0;
 

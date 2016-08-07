@@ -166,11 +166,13 @@
   color: $white;
 }
 .react-datepicker__day--disabled {
+  border: 1px solid transparent;
   cursor: default;
   color: #ccc;
 }
 .react-datepicker__day--disabled:hover {
   background-color: transparent;
+  border: 1px solid transparent;
   color: #ccc;
 }
 

@@ -45,6 +45,10 @@
           @media (max-width: 770px) {
             font-size: 1.25rem;
           }
+
+          @media (max-width: 400px) {
+            font-size: 1rem;
+          }
         }
 
         .officer__detail--title {
@@ -53,6 +57,10 @@
           @media (max-width: 770px) {
             font-size: 1rem;
           }
+
+          @media (max-width: 400px) {
+            font-size: 0.75rem;
+          }
         }
 
         .officer__detail--tier {
@@ -60,6 +68,10 @@
 
           @media (max-width: 770px) {
             font-size: 0.75rem;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 0.5rem;
           }
         }
       }

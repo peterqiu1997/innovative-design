@@ -23,7 +23,10 @@ export default class Index extends React.Component {
       sending: false,
       sent: false,
       sentError: null,
-      request: {}
+      request: {
+        campus: 'campus__title',
+        type: 'project__title'
+      }
     };
   }
 
@@ -34,6 +37,10 @@ export default class Index extends React.Component {
       sending: false,
       sentError: error.responseJSON // Error,
     });
+
+    $('html, body').animate({
+      scrollTop: $(document).height()
+    }, 400);
   }
 
   _handleSubmissionSuccess() {
@@ -82,7 +89,7 @@ export default class Index extends React.Component {
     setTimeout(() => {
       this._handleSubmissionError({
         responseJSON: {
-          message: "Cow"
+          message: "There was an error processing your request."
         }
       });
     }, 2000);
@@ -123,18 +130,20 @@ export default class Index extends React.Component {
 
     const generateUnsentFormBodyMarkup = () => {
       const formButton = !this.state.sending ? (
-        <button id="form__submit" type="submit">
-          submit
-        </button>
+        <div className="button__wrapper">
+          <button id="form__submit" type="submit">
+            submit
+          </button>
+        </div>
       ) : (
-        <div className="submit__loader"></div>
+        <div className="button__wrapper">
+          <div className="submit__loader"></div>
+        </div>
       );
 
       return (
-        <form id="request-form" onSubmit={ this._handleSubmit } style={{
-          marginLeft: 20
-        }}>
-          <div className="input-container">
+        <form id="request-form" onSubmit={ this._handleSubmit }>
+          <div className="input__container">
             <input
               ref="name"
               id="name"
@@ -144,7 +153,7 @@ export default class Index extends React.Component {
             />
             <label htmlFor="name">Name</label>
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <input
               ref="email"
               type="email"
@@ -155,7 +164,7 @@ export default class Index extends React.Component {
             />
             <label htmlFor="email">Email</label>
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <input
               ref="phone"
               type="phone"
@@ -166,7 +175,7 @@ export default class Index extends React.Component {
             />
             <label htmlFor="phone">Phone</label>
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <input
               ref="organization"
               type="organization"
@@ -177,7 +186,7 @@ export default class Index extends React.Component {
             />
             <label htmlFor="organization">Organization</label>
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <textarea
               ref="description"
               name="description"
@@ -192,7 +201,6 @@ export default class Index extends React.Component {
               ref="campus"
               name="campus"
               id="campus"
-              defaultValue="campus__title"
               defaultValue={ this.state.request.campus }
               required
             >
@@ -209,7 +217,6 @@ export default class Index extends React.Component {
               ref="type"
               name="type"
               id="type"
-              defaultValue="project__title"
               defaultValue={ this.state.request.type }
               required
             >
@@ -220,11 +227,10 @@ export default class Index extends React.Component {
               <option value="graphic">Graphic Design</option>
             </select>
           </div>
-          <div className="input-container">
-            <Datepicker name="deadline" {...dateProps} />
-            <label htmlFor="deadline">Deadline</label>
+          <div className="input__container">
+            <Datepicker name="deadline" {...dateProps} placeholderText="deadline" id="deadline" />
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <textarea
               ref="project"
               name="project"
@@ -234,7 +240,7 @@ export default class Index extends React.Component {
             ></textarea>
             <label htmlFor="project">Project Description</label>
           </div>
-          <div className="input-container">
+          <div className="input__container">
             <textarea
               ref="questions"
               name="questions"
@@ -266,11 +272,11 @@ export default class Index extends React.Component {
               <div className="request__info">
                 Please submit design requests through the form below.
               </div>
-              <div className="request__error">
-                { errorBody }
-              </div>
               <div className="request__form">
                 { formBody }
+              </div>
+              <div className="request__error">
+                { errorBody }
               </div>
             </div>
           </div>

@@ -5,6 +5,7 @@
     margin: 32px 0;
     font-family: 'Raleway';
     text-align: center;
+    padding: 5px;
   }
 
   .lessons__wrapper {
@@ -61,10 +62,22 @@
         .lesson__details--number {
           font-size: 1.5rem;
           margin-bottom: 5px;
+
+          @media (max-width: 800px) {
+            font-size: 1rem;
+          }
         }
 
         .lesson__details--title {
           font-size: 1.75rem;
+
+          @media (max-width: 800px) {
+            font-size: 1.5rem;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 1rem;
+          }
         }
       }
 
@@ -72,8 +85,7 @@
         margin-right: 0;
       }
 
-      &:hover {
-
+      &:hover, &:active {
         .lesson__details {
           opacity: 1;
           -webkit-transition-delay: 0.2s;
@@ -84,6 +96,32 @@
           -webkit-transform: rotateX(0);
           transform: rotateX(0);
           opacity: 0.8;
+        }
+      }
+
+      @media (max-width: 800px) {
+        width: 32.83%;
+        height: 31.5vw;
+
+        &:nth-child(4n) {
+          margin-right: 0.5%;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 49.25%;
+        height: 47.25vw;
+
+        &:nth-child(3n) {
+          margin-right: 0.5%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
         }
       }
     }

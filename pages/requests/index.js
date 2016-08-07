@@ -299,14 +299,13 @@ export default class Index extends React.Component {
   render () {
     const sentMsgBody = (
       <div className="sent__message">
+        <div className="thanks">Thank you!</div>
         <p>
-          Your request is currently being delivered by a group of avocado enthusiasts.
+          Your message has been sent.
           An officer should be reaching out to you in a couple days to discuss the details of the project.
         </p>
         <p>
-          Feel free to reach out to
-          <a href="mailto:innovativedesignatcal@gmail.com">innovativedesignatcal@gmail.com</a>
-          with additional questions.
+          Feel free to reach out to <a href="mailto:innovativedesignatcal@gmail.com">innovativedesignatcal@gmail.com</a> with additional questions.
         </p>
       </div>
     );

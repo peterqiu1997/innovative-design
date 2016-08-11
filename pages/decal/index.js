@@ -16,6 +16,7 @@ export default class Index extends React.Component {
     
     const lessons = [
       {
+        url: '/decal/lesson-1/',
         number: 'Lesson 1',
         title: 'Intro to Illustrator',
         img: '/img/decal/lesson1.png'
@@ -78,21 +79,23 @@ export default class Index extends React.Component {
           key={ `lessonElem-${index}` }
           className="lesson"
         >
-          <div
-            className="lesson__photo"
-            style={{
-              backgroundImage: `url(${prefixLink(lesson.img)})`
-            }}
-          ></div>
-          <div className="lesson__overlay"></div>
-          <div className="lesson__details">
-            <div className="lesson__details--number">
-              { lesson.number }
+          <a className="lesson__link" href={ prefixLink(lesson.url) }>
+            <div
+              className="lesson__photo"
+              style={{
+                backgroundImage: `url(${prefixLink(lesson.img)})`
+              }}
+            ></div>
+            <div className="lesson__overlay"></div>
+            <div className="lesson__details">
+              <div className="lesson__details--number">
+                { lesson.number }
+              </div>
+              <div className="lesson__details--title">
+                { lesson.title }
+              </div>
             </div>
-            <div className="lesson__details--title">
-              { lesson.title }
-            </div>
-          </div>
+          </a>
         </div>
       );
     }); 

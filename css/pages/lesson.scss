@@ -82,6 +82,19 @@
       img {
         width: 100%;
       }
+
+      @media (max-width: 640px) {
+        display: block;
+
+        &.left {
+          width: 60%;
+          margin: 0 auto;
+        }
+
+        &.right {
+          width: 100%;
+        }
+      }
     }
   }
 }

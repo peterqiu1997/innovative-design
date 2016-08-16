@@ -24,7 +24,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button">rsvp</button>
+              <button className="info__button" disabled>rsvp</button>
             </a>
           </div>
         </li>
@@ -37,7 +37,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button">rsvp</button>
+              <button className="info__button" disabled>rsvp</button>
             </a>
           </div>
         </li>
@@ -50,7 +50,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button">rsvp</button>
+              <button className="info__button" disabled>rsvp</button>
             </a>
             <a href="http://hex.innovativedesign.club">
               <button className="info__button">event website</button>
@@ -66,7 +66,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button">rsvp</button>
+              <button className="info__button" disabled>rsvp</button>
             </a>
             <a href="http://cmyk.innovativedesign.club">
               <button className="info__button">event website</button>
@@ -82,7 +82,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button">rsvp</button>
+              <button className="info__button" disabled>rsvp</button>
             </a>
             <a href="http://rgb.innovativedesign.club">
               <button className="info__button">event website</button>

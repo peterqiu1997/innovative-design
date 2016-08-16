@@ -13,7 +13,7 @@ export default class Index extends React.Component {
   componentDidMount() {}
 
   render () {
-    
+
     const officers = [
       {
         name: 'Jacqueline Woo',
@@ -23,7 +23,7 @@ export default class Index extends React.Component {
       {
         name: 'Natasha Welingkar',
         title: 'President',
-        photo: '/img/officers/cat.jpg'      
+        photo: '/img/officers/cat.jpg'
       },
       {
         name: 'Alven Wang',
@@ -45,6 +45,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Catherine Zhou',
+        tagline: '!! ༼;´༎ຶ ۝ ༎ຶ༽',
         title: 'VP of Marketing',
         tier: 'Marketing Tier',
         photo: '/img/officers/cat.jpg'
@@ -75,6 +76,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Julia Sun',
+        tagline: '1ce qube',
         title: 'Technology',
         tier: 'Web Tier',
         photo: '/img/officers/cat.jpg'
@@ -87,6 +89,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Charley Huang',
+        tagline: 'more than you can afford, pal. ferrari.',
         title: 'Internal',
         tier: 'Video Tier',
         photo: '/img/officers/cat.jpg'
@@ -169,6 +172,9 @@ export default class Index extends React.Component {
           <div className="officer__details">
             <div className="officer__detail--name">
               { person.name }
+            </div>
+            <div className="officer__detail--tagline">
+              <i>{ person.tagline }</i>
             </div>
             <div className="officer__detail--title">
               { person.title }

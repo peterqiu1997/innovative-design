@@ -1,4 +1,11 @@
 .decal {
+  max-width: $global-max-width;
+  margin: 0 auto;
+
+  @media (max-width: $global-max-width) {
+    padding: 0 1.5%;
+  }
+
   .description {
     margin: 32px 0;
     font-family: 'Raleway';
@@ -7,13 +14,12 @@
   }
 
   .lessons__wrapper {
-    padding: 2%;
     font-size: 0;
 
     .lesson {
       position: relative;
       width: 24.625%;
-      height: 23.625vw;
+      height: 18.625vw;
       display: inline-block;
       margin-right: 0.5%;
       margin-bottom: 0.5%;
@@ -98,7 +104,7 @@
 
       @media (max-width: 800px) {
         width: 32.83%;
-        height: 31.5vw;
+        height: 28.5vw;
 
         &:nth-child(4n) {
           margin-right: 0.5%;
@@ -111,7 +117,7 @@
 
       @media (max-width: 600px) {
         width: 49.25%;
-        height: 47.25vw;
+        height: 45.25vw;
 
         &:nth-child(3n) {
           margin-right: 0.5%;

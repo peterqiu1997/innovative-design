@@ -1,9 +1,10 @@
 // Team
 
 .team {
-  .officers {
-    padding: 2%;
+  max-width: $global-max-width;
+  margin: 0 auto;
 
+  .officers {
     .officer {
       position: relative;
       width: 23.5%;

@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   .slideshow {
-    max-width: 1280px;
+    max-width: $global-max-width;
     margin: 8% auto 0;
 
     @media (max-width: 620px) {
@@ -15,7 +15,7 @@
       height: 100%;
 
       .splash__container {
-        max-width: 1280px;
+        max-width: $global-max-width;
         width: 50%;
         margin: 0 auto 8% auto;
 
@@ -49,7 +49,7 @@
       }
 
       .slide__button--wrapper {
-        max-width: 1040px;
+        max-width: $global-max-width;
         margin: 0 auto;
         text-align: center;
 

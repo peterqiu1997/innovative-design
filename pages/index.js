@@ -46,7 +46,7 @@ export default class Index extends React.Component {
                 <div className="slide__button--wrapper">
                   <div
                     className="slide__button slide__button--1"
-                    style={{ backgroundImage: `url("${prefixLink('/img/club-three.jpg')}")` }}
+                    style={{ backgroundImage: `url("${prefixLink('/img/club-one.jpg')}")` }}
                   ></div>
                   <a href="http://apply.innovativedesign.club">
                     <div className="slide__button slide__button--2">

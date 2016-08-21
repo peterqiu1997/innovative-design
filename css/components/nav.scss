@@ -21,7 +21,7 @@
     @include clearfix();
     height: 100%;
     width: 100%;
-    max-width: 1280px;
+    max-width: $global-max-width;
     margin: 0 auto;
     clear: both;
 

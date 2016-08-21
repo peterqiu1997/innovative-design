@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "animejs": "^1.1.0",
     "axios": "^0.13.1",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2015": "^6.6.0",

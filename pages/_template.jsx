@@ -45,7 +45,7 @@ export default class Navigation extends React.Component {
           >
             <div className="nav__wrapper">
               <a className="nav__item nav__logo" href={ prefixLink('/') }>
-                <img src={ prefixLink('/img/logo.png') } />
+                <img src={ prefixLink('/img/logo-icon.png') } />
               </a>
               <div
                 className={classNames("nav__item", "nav__hamburger", {

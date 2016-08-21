@@ -67,7 +67,8 @@
           vertical-align: top;
 
           &.slide__button--1 {
-            background: url(/img/club-one.jpg) no-repeat center center;
+            background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
           }
 

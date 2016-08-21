@@ -1,32 +1,23 @@
 // Home
 
 .home {
-  height: 100vh;
   overflow-x: hidden;
 
   .slideshow {
-    height: 100%;
-    max-height: 1000px;
-    max-width: 1440px;
-    margin: 0 auto;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    max-width: 1280px;
+    margin: 8% auto 0;
+
+    @media (max-width: 620px) {
+      margin-top: 15%;
+    }
 
     .slide__layout-1 {
       height: 100%;
 
       .splash__container {
-        top: 30%;
-        max-width: 1440px;
+        max-width: 1280px;
         width: 100%;
-        margin: 0 auto;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        margin: 0 auto 8% auto;
 
         @media (max-width: 1440px) {
           width: 50%;
@@ -44,6 +35,10 @@
           width: 80%;
         }
 
+        @media (max-width: 620px) {
+          margin-bottom: 15%;
+        }
+
         @media (max-width: 540px) {
           width: 90%;
         }
@@ -58,8 +53,6 @@
       }
 
       .slide__button--wrapper {
-        height: 200px;
-        top: 32%;
         max-width: 1040px;
         margin: 0 auto;
         text-align: center;
@@ -69,9 +62,9 @@
         }
 
         .slide__button {
-          height: 100%;
           display: inline-block;
           width: 40%;
+          height: 200px;
           background: $blue;
           -webkit-clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
           clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
@@ -83,7 +76,8 @@
           }
 
           &.slide__button--2 {
-            font-size: 2rem;
+            font-size: 24px;
+            letter-spacing: 2px;
             color: $white;
             font-family: 'Raleway';
             text-transform: uppercase;

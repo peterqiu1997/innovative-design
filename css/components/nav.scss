@@ -1,7 +1,5 @@
 // Navigation
 
-
-
 .nav {
   @include clearfix();
   height: 100%;
@@ -138,12 +136,12 @@
             .hamburger__bar {
               &.bar--1 {
                 top: 9px;
-                transform: rotate(45deg); 
+                transform: rotate(45deg);
               }
 
               &.bar--2 {
                 top: 9px;
-                transform: rotate(-45deg); 
+                transform: rotate(-45deg);
               }
             }
           }

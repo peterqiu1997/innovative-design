@@ -32,10 +32,10 @@ export default class Navigation extends React.Component {
       <div className="root">
         <Headroom
           wrapperStyle={{
-            "max-height": navbarHeight
+            maxHeight: navbarHeight
           }}
           style={{
-            background: 'rgba(255, 255, 255, 0.95)'
+            background: 'rgba(255, 255, 255, 0.99)'
           }}
         >
           <div

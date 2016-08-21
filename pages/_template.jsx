@@ -1,66 +1,81 @@
-import React from 'react'
-import { Container } from 'react-responsive-grid'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
+import React from 'react';
+import { Container } from 'react-responsive-grid';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Headroom from 'react-headroom';
+import classNames from 'classnames';
 import $ from 'jquery';
 
 import 'css/_index.scss';
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
+const navbarHeight = 60;
 
-  componentDidMount() {
-    if (!("ontouchstart" in document.documentElement)) {
-      document.documentElement.className += "no-touch";
-    }
-  },
+export default class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navOpen: false
+    };
 
-  render () {
+    this._handleHamburger = this._handleHamburger.bind(this);
+  }
+
+  _handleHamburger(e) {
+    e.preventDefault();
+    this.setState({
+      navOpen: !this.state.navOpen
+    });
+  }
+
+  render() {
     return (
       <div className="root">
+        <Headroom
+          wrapperStyle={{
+            "max-height": navbarHeight
+          }}
+          style={{
+            background: 'rgba(255, 255, 255, 0.95)'
+          }}
+        >
+          <div
+            className={classNames("nav", {
+              "nav--open": this.state.navOpen
+            })}
+          >
+            <div className="nav__wrapper">
+              <a className="nav__item nav__logo" href={ prefixLink('/') }>
+                <img src={ prefixLink('/img/logo.png') } />
+              </a>
+              <div
+                className={classNames("nav__item", "nav__hamburger", {
+                  "nav__hamburger--active": this.state.navOpen
+                })}
+                onClick={this._handleHamburger}
+              >
+                <div className="hamburger__bar bar--1"></div>
+                <div className="hamburger__bar bar--2"></div>
+              </div>
+              <a className="nav__item nav__cta" href={ prefixLink('/requests/') }>
+                requests
+              </a>
+              <a className="nav__item nav__link" href={ prefixLink('/team/') }>
+                team
+              </a>
+              <a className="nav__item nav__link" href={ prefixLink('/events/') }>
+                events
+              </a>
+              <a className="nav__item nav__link" href={ prefixLink('/decal/') }>
+                decal
+              </a>
+            </div>
+          </div>
+        </Headroom>
         <div className="content">
           { this.props.children }
         </div>
-        <div className="nav">
-          <div className="nav__wrapper">
-            <a href={ prefixLink('/') }>
-              <div className="nav__item no-touch">
-                home
-              </div>
-            </a>
-            <a href={ prefixLink('/about/') }>
-              <div className="nav__item no-touch">
-                about
-              </div>
-            </a>
-            <a href={ prefixLink('/team/') }>
-              <div className="nav__item no-touch hide__second">
-                team
-              </div>
-            </a>
-            <a href={ prefixLink('/events/') }>
-              <div className="nav__item no-touch hide__last">
-                events
-              </div>
-            </a>
-            <a href={ prefixLink('/decal/') }>
-              <div className="nav__item no-touch hide__first">
-                decal
-              </div>
-            </a>
-            <a href={ prefixLink('/requests/') }>
-              <div className="nav__item no-touch">
-                requests
-              </div>
-            </a>
-          </div>
-        </div>
       </div>
     )
-  },
-})
+  }
+}
+

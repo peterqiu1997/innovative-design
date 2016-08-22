@@ -11,7 +11,7 @@ import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
 
 const numOfSections = 2;
-
+const window = window || {};
 const slideAnimations = {
   slide0: [
     {

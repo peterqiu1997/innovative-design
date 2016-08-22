@@ -19,7 +19,7 @@
     .lesson {
       position: relative;
       width: 24.625%;
-      height: 18.625vw;
+      height: 22.625vw;
       display: inline-block;
       margin-right: 0.5%;
       margin-bottom: 0.5%;
@@ -104,7 +104,7 @@
 
       @media (max-width: 800px) {
         width: 32.83%;
-        height: 28.5vw;
+        height: 30.5vw;
 
         &:nth-child(4n) {
           margin-right: 0.5%;

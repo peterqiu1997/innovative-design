@@ -161,14 +161,16 @@
             width: 300px;
             top: 12px;
             left: -200px;
-            background: $blue;
+            background-position: center center;
+            background-size: cover;
           }
 
           &.circle--two {
             height: 100%;
             width: 100%;
             margin: 0 auto;
-            background: $pink;
+            background-position: center center;
+            background-size: cover;
           }
 
           &.circle--three {
@@ -177,7 +179,8 @@
             right: -200px;
             height: 300px;
             width: 300px;
-            background: $purple;
+            background-position: center center;
+            background-size: cover;
           }
         }
 

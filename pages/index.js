@@ -71,9 +71,18 @@ export default class Index extends React.Component {
               </div>*/}
               <div className="slide__layout--2">
                 <div className="circle__container">
-                  <div className="circle circle--one"></div>
-                  <div className="circle circle--two"></div>
-                  <div className="circle circle--three"></div>
+                  <div
+                    className="circle circle--one"
+                    style={{ backgroundImage: `url("${prefixLink('/img/calday.jpg')}")` }}
+                  ></div>
+                  <div
+                    className="circle circle--two"
+                    style={{ backgroundImage: `url("${prefixLink('/img/marketing.png')}")` }}
+                  ></div>
+                  <div
+                    className="circle circle--three"
+                    style={{ backgroundImage: `url("${prefixLink('/img/flyers.png')}")` }}
+                  ></div>
                 </div>
                 <div className="info__container">
                   Innovative Design is a family of designers, photographers, web developers,

@@ -12,6 +12,55 @@ import Typing from './components/typing';
 
 const numOfSections = 2;
 
+const slideAnimations = {
+  slide0: [
+    {
+      targets: '.splash__container',
+      translateX: [window.innerWidth, 0],
+      delay: 25,
+      easing: "easeOutCirc",
+      duration: 440
+    },
+    {
+      targets: '.slide__button--wrapper',
+      translateX: [-window.innerWidth, 0],
+      delay: 50,
+      easing: "easeOutCirc",
+      duration: 440
+    }
+  ],
+  slide1: [
+    {
+      targets: '.circle--one',
+      scale: [0, 1],
+      delay: 25,
+      easing: "easeOutCirc",
+      duration: 440
+    },
+    {
+      targets: '.circle--two',
+      scale: [0, 1],
+      delay: 250,
+      easing: "easeOutCirc",
+      duration: 440
+    },
+    {
+      targets: '.circle--three',
+      scale: [0, 1],
+      delay: 475,
+      easing: "easeOutCirc",
+      duration: 440
+    },
+    {
+      targets: '.info__container',
+      translateY: [window.innerHeight, 0],
+      delay: 700,
+      easing: "easeOutCirc",
+      duration: 440
+    }
+  ]
+};
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +84,13 @@ export default class Index extends React.Component {
     this.setState({
       slideIndex: nextIndex < 0 ? numOfSections - 1 : nextIndex % numOfSections
     });
+
+    const animations = slideAnimations[`slide${this.state.slideIndex}`];
+    if (animations) {
+      for (let animation of animations) {
+        anime(animation);
+      }
+    }
   }
 
   render () {

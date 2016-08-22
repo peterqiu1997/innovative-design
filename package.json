@@ -31,6 +31,7 @@
     "react-document-title": "^2.0.1",
     "react-dropdown": "^1.1.0",
     "react-headroom": "^1.8.4",
+    "react-key-handler": "^0.2.0",
     "react-maskedinput": "^3.2.3",
     "react-responsive-grid": "^0.3.0",
     "react-router": "^2.0.1",

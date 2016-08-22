@@ -1,12 +1,16 @@
 import anime from 'animejs';
 import React from 'react';
+import classNames from 'classnames';
 import DocumentTitle from 'react-document-title';
+import KeyHandler, { KEYDOWN } from 'react-key-handler';
 import { prefixLink } from 'gatsby-helpers';
 
 import _ from 'lodash';
 
 import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
+
+const numOfSections = 2;
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -18,13 +22,18 @@ export default class Index extends React.Component {
 
   componentDidMount() {}
 
+  _handleKeyboardArrows(e, increment) {
+    this._handleArrowClick(e, true);
+  }
+
   _handleArrowClick(e, increment) {
     e.preventDefault();
 
     const currentIndex = this.state.slideIndex;
     const nextIndex = increment ? (currentIndex + 1) : (currentIndex - 1)
+
     this.setState({
-      slideIndex: nextIndex
+      slideIndex: nextIndex < 0 ? numOfSections - 1 : nextIndex % numOfSections
     });
   }
 
@@ -41,9 +50,47 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title="Innovative Design">
         <div>
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            keyValue="ArrowDown"
+            onKeyHandle={(e) => {
+              this._handleKeyboardArrows(e, true);
+            }}
+          />
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            keyValue="ArrowUp"
+            onKeyHandle={(e) => {
+              this._handleKeyboardArrows(e, false);
+            }}
+          />
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            keyValue="ArrowRight"
+            onKeyHandle={(e) => {
+              this._handleKeyboardArrows(e, true);
+            }}
+          />
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            keyValue="ArrowLeft"
+            onKeyHandle={(e) => {
+              this._handleKeyboardArrows(e, false);
+            }}
+          />
           <div className="page__wrapper home">
             <div className="slideshow">
-              {/*<div className="slide__layout--1">
+              <div
+                className={
+                  classNames(
+                    "slide__layout",
+                    "slide__layout--1",
+                    {
+                      "slide__layout--selected": this.state.slideIndex === 0
+                    }
+                  )
+                }
+              >
                 <div className="splash__container">
                   <Logo logoType={ LOGO_TEXT } logoClass={ 'logo__svg--color' } />
                   <Typing
@@ -68,8 +115,18 @@ export default class Index extends React.Component {
                     </div>
                   </a>
                 </div>
-              </div>*/}
-              <div className="slide__layout--2">
+              </div>
+              <div
+                className={
+                  classNames(
+                    "slide__layout",
+                    "slide__layout--2",
+                    {
+                      "slide__layout--selected": this.state.slideIndex === 1
+                    }
+                  )
+                }
+              >
                 <div className="circle__container">
                   <div
                     className="circle circle--one"

@@ -11,9 +11,22 @@ import Typing from './components/typing';
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      slideIndex: 0
+    };
   }
 
   componentDidMount() {}
+
+  _handleArrowClick(e, increment) {
+    e.preventDefault();
+
+    const currentIndex = this.state.slideIndex;
+    const nextIndex = increment ? (currentIndex + 1) : (currentIndex - 1)
+    this.setState({
+      slideIndex: nextIndex
+    });
+  }
 
   render () {
     const stringsToType = [
@@ -57,9 +70,28 @@ export default class Index extends React.Component {
                 </div>
               </div>
             </div>
+            <div className="slideshow__nav">
+              <div className="slideshow__arrows">
+                <div
+                  className="arrow arrow--left"
+                  onClick={(e) => { this._handleArrowClick(e, false) }}
+                >
+                  <div className="arrow__bar"></div>
+                  <div className="arrow__triangle"></div>
+                </div>
+                <div
+                  className="arrow arrow--right"
+                  onClick={(e) => { this._handleArrowClick(e, true) }}
+                >
+                  <div className="arrow__bar"></div>
+                  <div className="arrow__triangle"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </DocumentTitle>
     );
   }
 }
+

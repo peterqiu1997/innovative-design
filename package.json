@@ -1,9 +1,11 @@
 {
-  "name": "Innovative Design",
+  "name": "InnovativeDesign",
   "description": "Innovative Design",
   "version": "1.0.0",
   "author": "Julia Sun <jubearsun>",
-  "contributors": ["Christian Le <cle1994>"],
+  "contributors": [
+    "Christian Le <cle1994>"
+  ],
   "dependencies": {
     "animejs": "^1.1.0",
     "axios": "^0.13.1",
@@ -31,7 +33,7 @@
     "react-datepicker": "^0.29.0",
     "react-document-title": "^2.0.1",
     "react-dropdown": "^1.1.0",
-    "react-headroom": "^1.8.4",
+    "react-headroom": "^2.1.2",
     "react-key-handler": "^0.2.0",
     "react-maskedinput": "^3.2.3",
     "react-responsive-grid": "^0.3.0",

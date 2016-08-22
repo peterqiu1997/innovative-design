@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Innovative Design",
+  "description": "Innovative Design",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Julia Sun <jubearsun>",
+  "contributors": ["Christian Le <cle1994>"],
   "dependencies": {
     "animejs": "^1.1.0",
     "axios": "^0.13.1",
@@ -51,7 +52,6 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\""
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public ."
   }
 }

@@ -54,13 +54,57 @@ function generateSlideAnimations(win) {
         duration: 440
       },
       {
-        targets: '.info__container',
+        targets: '.info__container--circles',
         translateY: [win.innerHeight, 0],
-        delay: 700,
+        delay: 50,
         easing: "easeOutCirc",
         duration: 440
       }
-    ]
+    ],
+    slide2: [
+      {
+        targets: '.blue',
+        scale: [0, 1],
+        delay: 25,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.gold',
+        scale: [0, 1],
+        delay: 50,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.photo',
+        scale: [0, 1],
+        delay: 75,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.web',
+        scale: [0, 1],
+        delay: 100,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.video',
+        scale: [0, 1],
+        delay: 125,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.info__container--icons',
+        translateY: [win.innerHeight, 0],
+        delay: 150,
+        easing: "easeOutCirc",
+        duration: 440
+      }
+    ],
   };
 }
 
@@ -206,7 +250,7 @@ export default class Index extends React.Component {
                     style={{ backgroundImage: `url("${prefixLink('/img/flyers.png')}")` }}
                   ></div>
                 </div>
-                <div className="info__container">
+                <div className="info__container--circles">
                   Innovative Design is a family of designers, photographers, web developers,
                   and videographers at the University of California, Berkeley. We are creative
                   individuals who are continuously evolving by collaborating, inspiring and
@@ -225,28 +269,38 @@ export default class Index extends React.Component {
                 }
               >
                 <div className="icons__container">
-                  <div
-                    className="icon blue"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/blue.png')}")` }}
-                  ></div>
-                  <div
-                    className="icon gold"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/gold.png')}")` }}
-                  ></div>
-                  <div
-                    className="icon photo"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
-                  ></div>
-                  <div
-                    className="icon web"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
-                  ></div>
-                  <div
-                    className="icon video"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
-                  ></div>
+                  <a href="http://makeberkeleybeautiful.com/blue">
+                    <div
+                      className="icon blue"
+                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/blue.png')}")` }}
+                    ></div>
+                  </a>
+                  <a href="http://makeberkeleybeautiful.com/gold">
+                    <div
+                      className="icon gold"
+                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/gold.png')}")` }}
+                    ></div>
+                  </a>
+                  <a href="http://makeberkeleybeautiful.com/photo">
+                    <div
+                      className="icon photo"
+                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
+                    ></div>
+                  </a>
+                  <a href="http://makeberkeleybeautiful.com/web">
+                    <div
+                      className="icon web"
+                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
+                    ></div>
+                  </a>
+                  <a href="http://makeberkeleybeautiful.com/video">
+                    <div
+                      className="icon video"
+                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
+                    ></div>
+                  </a>
                 </div>
-                <div className="info__container">
+                <div className="info__container--icons">
                   <p>
                     Innovative Design has six tiers that students can apply to be a member on: Blue, Gold, Photo, Video, and Web.
                   </p>
@@ -265,6 +319,9 @@ export default class Index extends React.Component {
                   <p>
                     <b>Video Tier</b> creates video campaigns for clients on and off campus -- everything from logo animations,
                     event recap videos and Kickstarter campaigns.
+                  </p>
+                  <p>
+                    Click on each icon to learn more about the tier or visit <b><a href="http://makeberkeleybeautiful.com">makeberkeleybeautiful.com</a></b> for a full portfolio.
                   </p>
                 </div>
               </div>

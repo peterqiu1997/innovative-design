@@ -237,14 +237,35 @@ export default class Index extends React.Component {
                     className="icon photo"
                     style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
                   ></div>
-                  <div className="icon web"></div>
-                  <div className="icon video"></div>
-                  <div className="icon marketing"></div>
+                  <div
+                    className="icon web"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon video"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
+                  ></div>
                 </div>
                 <div className="info__container">
-                  The club has six tiers that students can apply to be a member on: Blue, Gold, Photo, Video, Web and Product.
-                  In addition, Innovative Design also has a dedicated Marketing tier, which members can apply to after
-                  having been in the club for at least one semester.
+                  <p>
+                    Innovative Design has six tiers that students can apply to be a member on: Blue, Gold, Photo, Video, and Web.
+                  </p>
+                  <p>
+                    There are two design tiers, Gold and Blue Tier.  <b>Blue Tier</b> is a group of intermediate to advanced designers
+                    that offers design services to off-campus groups while <b>Gold Tier</b> offers graphic design education
+                    and experience for beginner to intermediate designers to on-campus groups.
+                  </p>
+                  <p>
+                    <b>Photo Tier</b> is a hands-on experience in shooting professional headshots, event photography, stock photos and more.
+                  </p>
+                  <p>
+                    <b>Web Tier</b> works for clients that are in need of technical help in designing their websites.
+                    Tier members learn new skills and put existing knowledge to use through hands-on experience.
+                  </p>
+                  <p>
+                    <b>Video Tier</b> creates video campaigns for clients on and off campus -- everything from logo animations,
+                    event recap videos and Kickstarter campaigns.
+                  </p>
                 </div>
               </div>
             </div>

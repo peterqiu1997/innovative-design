@@ -276,6 +276,66 @@
           font-family: 'Raleway';
         }
       }
+
+      &.slide__layout--3 {
+        .icons__container {
+          max-width: $global-max-width;
+          text-align: center;
+          margin-top: 12%;
+          padding: 0 12px;
+
+          .icon {
+            display: inline-block;
+            width: 175px;
+            height: 175px;
+            margin-right: 2px;
+            background-position: center center;
+            background-size: cover;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            @media (max-width: 1090px) {
+              width: 150px;
+              height: 150px;
+            }
+
+            @media (max-width: 940px) {
+              width: 200px;
+              height: 200px;
+            }
+
+            @media (max-width: 630px) {
+              width: 150px;
+              height: 150px;
+            }
+
+            @media (max-width: 480px) {
+              width: 125px;
+              height: 125px;
+            }
+
+            @media (max-width: 405px) {
+              width: 100px;
+              height: 100px;
+            }
+
+            @media (max-width: 360px) {
+              width: 90px;
+              height: 90px;
+            }
+          }
+        }
+
+        .info__container {
+          max-width: 900px;
+          padding: 0 24px;
+          margin: 48px auto;
+          font-size: 18px;
+          font-family: 'Raleway';
+        }
+      }
     }
   }
 

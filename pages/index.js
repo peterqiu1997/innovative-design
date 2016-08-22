@@ -10,7 +10,7 @@ import _ from 'lodash';
 import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
 
-const numOfSections = 2;
+const numOfSections = 3;
 let slideAnimations = {};
 
 function generateSlideAnimations(win) {
@@ -211,6 +211,40 @@ export default class Index extends React.Component {
                   and videographers at the University of California, Berkeley. We are creative
                   individuals who are continuously evolving by collaborating, inspiring and
                   educating one another.
+                </div>
+              </div>
+              <div
+                className={
+                  classNames(
+                    "slide__layout",
+                    "slide__layout--3",
+                    {
+                      "slide__layout--selected": this.state.slideIndex === 2
+                    }
+                  )
+                }
+              >
+                <div className="icons__container">
+                  <div
+                    className="icon blue"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/blue.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon gold"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/gold.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon photo"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
+                  ></div>
+                  <div className="icon web"></div>
+                  <div className="icon video"></div>
+                  <div className="icon marketing"></div>
+                </div>
+                <div className="info__container">
+                  The club has six tiers that students can apply to be a member on: Blue, Gold, Photo, Video, Web and Product.
+                  In addition, Innovative Design also has a dedicated Marketing tier, which members can apply to after
+                  having been in the club for at least one semester.
                 </div>
               </div>
             </div>

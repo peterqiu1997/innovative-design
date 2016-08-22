@@ -30,16 +30,31 @@ module.exports = React.createClass({
           />
           <meta
             name="description"
-            content=""
+            content="Cal's student run creative agency, on a mission to make Berkeley beautiful."
           />
           <meta
             name="keywords"
-            content=""
+            content="innovative, design, innovative design, college, berkeley, design club, design organization, professional serfices, berkeley design club, innod, innod at cal, make berkeley beautiful"
+          />
+          <meta
+            property="og:image"
+            content="http://innovativedesign.club/img/Logo.png"
+          />
+          <meta
+            property="og:title"
+            content="Innovative Design"
+          />
+          <meta
+            property="og:type"
+            content="website" />
+          <meta
+            property="og:url"
+            content="http://innovativedesign.club"
           />
           <title>{ title }</title>
-          
-          <link 
-            rel="icon" 
+
+          <link
+            rel="icon"
             type="img/png"
             href={ prefixLink('/img/Logo.png') }
           />
@@ -48,14 +63,14 @@ module.exports = React.createClass({
             rel='stylesheet'
             type='text/css'
           />
-          <link 
-            href='https://fonts.googleapis.com/css?family=Open+Sans' 
-            rel='stylesheet' 
+          <link
+            href='https://fonts.googleapis.com/css?family=Open+Sans'
+            rel='stylesheet'
             type='text/css'
           />
-          <link 
-            href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700,800,900' 
-            rel='stylesheet' 
+          <link
+            href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700,800,900'
+            rel='stylesheet'
             type='text/css'
           />
           <link

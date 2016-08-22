@@ -2,6 +2,7 @@ import anime from 'animejs';
 import React from 'react';
 import classNames from 'classnames';
 import DocumentTitle from 'react-document-title';
+import FontAwesome from 'react-fontawesome';
 import KeyHandler, { KEYDOWN } from 'react-key-handler';
 import { prefixLink } from 'gatsby-helpers';
 
@@ -10,7 +11,7 @@ import _ from 'lodash';
 import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
 
-const numOfSections = 3;
+const numOfSections = 4;
 let slideAnimations = {};
 
 function generateSlideAnimations(win) {
@@ -99,6 +100,36 @@ function generateSlideAnimations(win) {
       },
       {
         targets: '.info__container--icons',
+        translateY: [win.innerHeight, 0],
+        delay: 150,
+        easing: "easeOutCirc",
+        duration: 440
+      }
+    ],
+    slide3: [
+      {
+        targets: '.fb',
+        scale: [0, 1],
+        delay: 25,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.twitter',
+        scale: [0, 1],
+        delay: 250,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.ig',
+        scale: [0, 1],
+        delay: 475,
+        easing: "easeOutCirc",
+        duration: 440
+      },
+      {
+        targets: '.info__container--media',
         translateY: [win.innerHeight, 0],
         delay: 150,
         easing: "easeOutCirc",
@@ -323,6 +354,47 @@ export default class Index extends React.Component {
                   <p>
                     Click on each icon to learn more about the tier or visit <b><a href="http://makeberkeleybeautiful.com">makeberkeleybeautiful.com</a></b> for a full portfolio.
                   </p>
+                </div>
+              </div>
+              <div
+                className={
+                  classNames(
+                    "slide__layout",
+                    "slide__layout--4",
+                    {
+                      "slide__layout--selected": this.state.slideIndex === 3
+                    }
+                  )
+                }
+              >
+                <div className="media__container">
+                  <a href="https://www.facebook.com/InnovativeDesignUCB/">
+                    <FontAwesome
+                      className="media__icon fb"
+                      name="facebook"
+                      size="3x"
+                      style={{ color: '#3b5998' }}
+                    />
+                  </a>
+                  <a href="https://twitter.com/innodatcal">
+                    <FontAwesome
+                      className="media__icon twitter"
+                      name="twitter"
+                      size="3x"
+                      style={{ color: '#00aced' }}
+                    />
+                  </a>
+                  <a href="https://www.instagram.com/innodatcal/">
+                    <FontAwesome
+                      className="media__icon ig"
+                      name="instagram"
+                      size="3x"
+                      style={{ color: '#8a3ab9' }}
+                    />
+                  </a>
+                </div>
+                <div className="info__container--media">
+                  Follow us on social media for event updates and more!
                 </div>
               </div>
             </div>

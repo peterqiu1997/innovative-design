@@ -43,7 +43,7 @@ export default class Index extends React.Component {
         <div>
           <div className="page__wrapper home">
             <div className="slideshow">
-              <div className="slide__layout-1">
+              {/*<div className="slide__layout--1">
                 <div className="splash__container">
                   <Logo logoType={ LOGO_TEXT } logoClass={ 'logo__svg--color' } />
                   <Typing
@@ -67,6 +67,19 @@ export default class Index extends React.Component {
                       <div className="slide__fill"></div>
                     </div>
                   </a>
+                </div>
+              </div>*/}
+              <div className="slide__layout--2">
+                <div className="circle__container">
+                  <div className="circle circle--one"></div>
+                  <div className="circle circle--two"></div>
+                  <div className="circle circle--three"></div>
+                </div>
+                <div className="info__container">
+                  Innovative Design is a family of designers, photographers, web developers,
+                  and videographers at the University of California, Berkeley. We are creative
+                  individuals who are continuously evolving by collaborating, inspiring and
+                  educating one another.
                 </div>
               </div>
             </div>

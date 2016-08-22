@@ -5,17 +5,17 @@
 
   .slideshow {
     max-width: $global-max-width;
-    margin: 8% auto 0;
+    margin: 6% auto 0;
 
     @media (max-width: 620px) {
-      margin-top: 15%;
-    }
-
-    @media (max-width: 320px) {
       margin-top: 12%;
     }
 
-    .slide__layout-1 {
+    @media (max-width: 320px) {
+      margin-top: 10%;
+    }
+
+    .slide__layout--1 {
       height: 100%;
 
       .splash__container {
@@ -143,6 +143,129 @@
         }
       }
     }
+
+    .slide__layout--2 {
+      .circle__container {
+        max-width: $global-max-width;
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        overflow: visible;
+
+        .circle {
+          border-radius: 50%;
+
+          &.circle--one {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            top: 12px;
+            left: -200px;
+            background: $blue;
+          }
+
+          &.circle--two {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background: $pink;
+          }
+
+          &.circle--three {
+            position: absolute;
+            bottom: 12px;
+            right: -200px;
+            height: 300px;
+            width: 300px;
+            background: $purple;
+          }
+        }
+
+        @media (max-width: 900px) {
+          height: 350px;
+          width: 350px;
+
+          .circle {
+            &.circle--one {
+              height: 240px;
+              width: 240px;
+              left: -150px;
+            }
+
+            &.circle--three {
+              height: 240px;
+              width: 240px;
+              right: -150px;
+            }
+          }
+        }
+
+        @media (max-width: 680px) {
+          height: 280px;
+          width: 280px;
+
+          .circle {
+            &.circle--one {
+              height: 200px;
+              width: 200px;
+              left: -100px;
+            }
+
+            &.circle--three {
+              height: 200px;
+              width: 200px;
+              right: -100px;
+            }
+          }
+        }
+
+        @media (max-width: 520px) {
+          height: 200px;
+          width: 200px;
+
+          .circle {
+            &.circle--one {
+              height: 148px;
+              width: 148px;
+              left: -75px;
+            }
+
+            &.circle--three {
+              height: 148px;
+              width: 148px;
+              right: -75px;
+            }
+          }
+        }
+
+        @media (max-width: 380px) {
+          height: 164px;
+          width: 164px;
+
+          .circle {
+            &.circle--one {
+              height: 124px;
+              width: 124px;
+              left: -60px;
+            }
+
+            &.circle--three {
+              height: 124px;
+              width: 124px;
+              right: -60px;
+            }
+          }
+        }
+      }
+
+      .info__container {
+        max-width: 800px;
+        padding: 0 24px;
+        margin: 48px auto;
+        font-size: 18px;
+        font-family: 'Raleway';
+      }
+    }
   }
 
   .slideshow__nav {
@@ -175,8 +298,8 @@
       .arrow__triangle {
         position: absolute;
         top: -9px;
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         transition: border 250ms;
       }
 
@@ -184,7 +307,7 @@
         .arrow__triangle {
           left: -12px;
           border-top: 12px solid transparent;
-          border-bottom: 12px solid transparent; 
+          border-bottom: 12px solid transparent;
           border-right: 12px solid $grey;
         }
       }

@@ -302,7 +302,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="info__container--icons">
                   <p>
-                    Innovative Design has six tiers that students can apply to be a member on: Blue, Gold, Photo, Video, and Web.
+                    Innovative Design has five tiers that students can apply to be a member on: Blue, Gold, Photo, Video, and Web.
                   </p>
                   <p>
                     There are two design tiers, Gold and Blue Tier.  <b>Blue Tier</b> is a group of intermediate to advanced designers

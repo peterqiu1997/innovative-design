@@ -57,7 +57,7 @@ function generateSlideAnimations(win) {
       {
         targets: '.info__container--circles',
         translateY: [win.innerHeight, 0],
-        delay: 50,
+        delay: 250,
         easing: "easeOutCirc",
         duration: 440
       }
@@ -66,35 +66,35 @@ function generateSlideAnimations(win) {
       {
         targets: '.blue',
         scale: [0, 1],
-        delay: 25,
+        delay: 50,
         easing: "easeOutCirc",
         duration: 440
       },
       {
         targets: '.gold',
         scale: [0, 1],
-        delay: 50,
+        delay: 100,
         easing: "easeOutCirc",
         duration: 440
       },
       {
         targets: '.photo',
         scale: [0, 1],
-        delay: 75,
+        delay: 150,
         easing: "easeOutCirc",
         duration: 440
       },
       {
         targets: '.web',
         scale: [0, 1],
-        delay: 100,
+        delay: 200,
         easing: "easeOutCirc",
         duration: 440
       },
       {
         targets: '.video',
         scale: [0, 1],
-        delay: 125,
+        delay: 250,
         easing: "easeOutCirc",
         duration: 440
       },

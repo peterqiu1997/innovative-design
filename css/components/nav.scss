@@ -6,7 +6,6 @@
   max-height: $navbar-height;
   width: 100%;
   overflow: hidden;
-  padding: 8px 0;
 
   @media (max-width: 720px) {
     transition: max-height 250ms;

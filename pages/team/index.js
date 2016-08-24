@@ -112,7 +112,7 @@ export default class Index extends React.Component {
         name: 'Grace Noh',
         tagline: 'My wifi password is \"catsaregreat.\"',
         title: 'Education Coordinator',
-        tier: 'Intro to Photoshop and Illustrator Decal',
+        tier: 'Intro Decal',
         photo: '/img/officers/cat.jpg'
       },
       {
@@ -133,7 +133,7 @@ export default class Index extends React.Component {
         name: 'Charisse Celestial',
         tagline: 'ᕕ( ᐛ )ᕗ',
         title: 'Advisor',
-        tier: 'Intro to Photoshop and Illustrator Decal',
+        tier: 'Intro Decal',
         photo: '/img/officers/cat.jpg'
       },
       {
@@ -203,7 +203,7 @@ export default class Index extends React.Component {
         name: 'Margaret Zhou',
         tagline: 'margiemARgiemargaretmARgaret',
         title: 'Facilitator',
-        tier: 'Intro to Photoshop and Illustrator Decal',
+        tier: 'Intro Decal',
         photo: '/img/officers/cat.jpg'
       }
     ];

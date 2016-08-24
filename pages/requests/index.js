@@ -155,7 +155,11 @@ export default class Index extends React.Component {
           />
         </div>
         <div className="input__container input__container--half">
-          <Datepicker name="deadline" {...dateProps} placeholderText="deadline" id="deadline" />
+          <Datepicker
+            name="deadline" {...dateProps}
+            placeholderText="deadline" id="deadline"
+            excludeDates={[moment(), moment().add(14, 'days')]}
+          />
         </div>
         <div className="input__container">
           <textarea

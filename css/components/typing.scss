@@ -15,11 +15,13 @@ $s__typing--line: $s__typing--text * 1.25;
     font-size: $s__typing--text;
     line-height: $s__typing--line;
     letter-spacing: 2rem;
+    left: 2px;
 
     @media (max-width: 1200px) {
       margin-left: -5px;
       font-size: 3.5rem;
       line-height: 4.3rem;
+      left: 0px;
     }
 
     @media (max-width: 1110px) {

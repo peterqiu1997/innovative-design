@@ -27,7 +27,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Alven Wang',
-        tagline: 'yolo',
+        tagline: 'detail oriented team player who thinks outside the box',
         title: 'Design Services',
         tier: 'Gold Tier',
         photo: '/img/officers/cat.jpg'
@@ -41,13 +41,14 @@ export default class Index extends React.Component {
       },
       {
         name: 'Sonia Hung',
+        tagline: 'feed me kimchi and i\'ll love you <3 ',
         title: 'External',
         tier: 'Gold Tier',
         photo: '/img/officers/cat.jpg'
       },
       {
         name: 'David Xie',
-        tagline: 'succulent boi',
+        tagline: 'succ(ulent) boi',
         title: 'External',
         tier: 'Gold Tier',
         photo: '/img/officers/cat.jpg'
@@ -95,7 +96,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Charley Huang',
-        tagline: 'more than you can afford, pal. ferrari.',
+        tagline: 'More than you can afford, pal. Ferrari.',
         title: 'Internal',
         tier: 'Video Tier',
         photo: '/img/officers/cat.jpg'
@@ -109,7 +110,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Grace Noh',
-        tagline: 'my wifi password is \'cats are great\'',
+        tagline: 'My wifi password is \"catsaregreat.\"',
         title: 'Education Coordinator',
         tier: 'Intro to Photoshop and Illustrator Decal',
         photo: '/img/officers/cat.jpg'
@@ -118,7 +119,7 @@ export default class Index extends React.Component {
         name: 'Yudi Sun',
         tagline: 'shark baby',
         title: 'Education Outreach',
-        tier: 'Intro to Photoshop and Illustrator Decal',
+        tier: 'Gold Tier',
         photo: '/img/officers/cat.jpg'
       },
       {
@@ -169,6 +170,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Pamela Hu',
+        tagline: 'Knock knock? Hu\'s there.',
         title: 'Facilitator',
         tier: 'Photo Decal',
         photo: '/img/officers/cat.jpg'
@@ -181,7 +183,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Hongye Xu',
-        tagline: 'pray for me, i\'m about to hit the ye button',
+        tagline: 'Pray for me, I\'m bout to hit the Ye button',
         title: 'Advisor',
         photo: '/img/officers/cat.jpg'
       },
@@ -193,8 +195,15 @@ export default class Index extends React.Component {
       },
       {
         name: 'Jordan Said',
-        tagline: 'doing too much. asha?',
+        tagline: 'Doing too much. Asha?',
         title: 'Advisor',
+        photo: '/img/officers/cat.jpg'
+      },
+      {
+        name: 'Margaret Zhou',
+        tagline: 'margiemARgiemargaretmARgaret',
+        title: 'Facilitator',
+        tier: 'Intro to Photoshop and Illustrator Decal',
         photo: '/img/officers/cat.jpg'
       }
     ];

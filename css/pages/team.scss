@@ -46,10 +46,6 @@
           @media (max-width: 770px) {
             font-size: 1.25rem;
           }
-
-          @media (max-width: 520px) {
-            font-size: 0.8rem;
-          }
         }
 
         .officer__detail--tagline {
@@ -116,6 +112,128 @@
         }
 
         .officer__overlay {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 1040px) {
+        width: 32%;
+
+        &:nth-child(4n) {
+          margin-right: 2%;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 650px) {
+        width: 49%;
+
+        &:nth-child(3n) {
+          margin-right: 2%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .marketing__wrapper {
+    padding: 0 2%;
+
+    .marketing {
+      position: relative;
+      width: 23.5%;
+      margin-bottom: 1.5%;
+      margin-right: 2%;
+      display: inline-block;
+
+      .marketing__photo {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .marketing__details {
+        font-family: "Lato";
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        opacity: 0;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -ms-transform: opacity 500ms;
+        transition: opacity 500ms;
+
+        .marketing__detail--name {
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+          text-transform: uppercase;
+
+          @media (max-width: 770px) {
+            font-size: 1.25rem;
+          }
+
+          @media (max-width: 520px) {
+            font-size: 0.8rem;
+          }
+        }
+
+        .marketing__detail--tagline {
+          margin-bottom: 5px;
+
+          @media (max-width: 770px) {
+            font-size: 1rem;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      .marketing__overlay {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: $white;
+        opacity: 0.45;
+        -webkit-transition: width 500ms;
+        -moz-transition: width 500ms;
+        -o-transition: width 500ms;
+        transition: width 500ms;
+
+        &.marketing__overlay--left {
+          left: 0;
+        }
+
+        &.marketing__overlay--right {
+          right: 0;
+        }
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:hover, &:active {
+        .marketing__details {
+          opacity: 1;
+        }
+
+        .marketing__overlay {
           width: 100%;
         }
       }

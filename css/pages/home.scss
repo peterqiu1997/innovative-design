@@ -370,6 +370,21 @@
     padding: 48px 0;
     text-align: center;
 
+    ul.dots {
+      li.nav__item {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $blue;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-transition: background 250ms, opacity 250ms;
+        -moz-transition: background 250ms, opacity 250ms;
+        transition: background 250ms, opacity 250ms;
+        margin :0 4px;
+      }
+    }
+
     @media (max-height: 600px) {
       padding: 32px 0;
     }

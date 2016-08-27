@@ -30,6 +30,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'David Bui',
+        tagline: 'lets dispel with this fiction i have any idea what i\'m doing',
         photo: '/img/officers/davidb.jpg'
       }
     ];

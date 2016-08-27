@@ -22,6 +22,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Sey Kim',
+        tagline: 'shrek is love. shrek is life.',
         photo: '/img/officers/sey.jpg'
       },
       {

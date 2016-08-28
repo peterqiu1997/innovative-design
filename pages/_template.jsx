@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-responsive-grid';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
+import FontAwesome from 'react-fontawesome';
 import Headroom from 'react-headroom';
 import classNames from 'classnames';
 import $ from 'jquery';
@@ -59,6 +60,26 @@ export default class Navigation extends React.Component {
               <a className="nav__item nav__cta" href={ prefixLink('/requests/') }>
                 requests
               </a>
+              <div className="nav__item nav__media">
+                <a href="https://www.facebook.com/InnovativeDesignUCB/" className="">
+                  <FontAwesome
+                    className="media__icon fb"
+                    name="facebook"
+                  />
+                </a>
+                <a href="https://twitter.com/innodatcal" className="">
+                  <FontAwesome
+                    className="media__icon twitter"
+                    name="twitter"
+                  />
+                </a>
+                <a href="https://www.instagram.com/innodatcal/" className="">
+                  <FontAwesome
+                    className="media__icon ig"
+                    name="instagram"
+                  />
+                </a>
+              </div>
               <a className="nav__item nav__link" href={ prefixLink('/team/') }>
                 team
               </a>

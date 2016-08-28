@@ -268,7 +268,7 @@ export default class Index extends React.Component {
               { person.name }
             </div>
             <div className="marketing__detail--tagline">
-              { person.tagline }
+              <i>{ person.tagline }</i>
             </div>
           </div>
         </div>

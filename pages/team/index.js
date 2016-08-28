@@ -40,11 +40,13 @@ export default class Index extends React.Component {
     const officers = [
       {
         name: 'Jacqueline Woo',
+        tagline: 'where\'s the selfie stick',
         title: 'President',
         photo: '/img/officers/jackie.jpg'
       },
       {
         name: 'Natasha Welingkar',
+        tagline: 'never not laughing',
         title: 'President',
         photo: '/img/officers/natasha.jpg'
       },
@@ -113,6 +115,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Peter Phan',
+        tagline: 'photo slave',
         title: 'Recollections',
         tier: 'Photo Tier',
         photo: '/img/officers/peter.jpg'
@@ -161,12 +164,14 @@ export default class Index extends React.Component {
       },
       {
         name: 'Jason Mai',
+        tagline: 'worst behavior',
         title: 'Advisor',
         tier: 'Graphic Design Principles and Photo Decals',
         photo: '/img/officers/jason.jpg'
       },
       {
         name: 'Brandon Chau',
+        tagline: 'photo senpai',
         title: 'Advisor',
         tier: 'Photo Decal',
         photo: '/img/officers/brandon.jpg'

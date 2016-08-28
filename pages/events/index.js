@@ -15,7 +15,7 @@ export default class Index extends React.Component {
   render () {
     const timeline = (
       <ul className="timeline">
-        <li className="event" data-date="September 7, 2016">
+        <li className="event" data-date="August 29, 2016">
           <h3>Decal Infosession</h3>
           <h4 className="hidden__date">September 7, 2016</h4>
           <p>

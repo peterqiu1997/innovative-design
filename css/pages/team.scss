@@ -184,13 +184,10 @@
           @media (max-width: 770px) {
             font-size: 1.25rem;
           }
-
-          @media (max-width: 520px) {
-            font-size: 0.8rem;
-          }
         }
 
         .marketing__detail--tagline {
+          padding: 5px;
           margin-bottom: 5px;
 
           @media (max-width: 770px) {

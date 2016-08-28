@@ -27,6 +27,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Irene Dea',
+        tagline: 'popoto',
         photo: '/img/officers/irene.jpg'
       },
       {
@@ -185,6 +186,13 @@ export default class Index extends React.Component {
         photo: '/img/officers/davinci.jpg'
       },
       {
+        name: 'Margaret Zhou',
+        tagline: 'margiemARgiemargaretmARgaret',
+        title: 'Facilitator',
+        tier: 'Intro Decal',
+        photo: '/img/officers/margie.jpg'
+      },
+      {
         name: 'Pamela Hu',
         tagline: 'Knock knock? Hu\'s there.',
         title: 'Facilitator',
@@ -208,13 +216,6 @@ export default class Index extends React.Component {
         tagline: 'Doing too much. Asha?',
         title: 'Advisor',
         photo: '/img/officers/jordan.jpg'
-      },
-      {
-        name: 'Margaret Zhou',
-        tagline: 'margiemARgiemargaretmARgaret',
-        title: 'Facilitator',
-        tier: 'Intro Decal',
-        photo: '/img/officers/margie.jpg'
       }
     ];
 

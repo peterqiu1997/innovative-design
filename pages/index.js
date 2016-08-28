@@ -11,6 +11,8 @@ import _ from 'lodash';
 import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
 
+const DISPLAY_NONE = 'none';
+const DISPLAY_BLOCK = 'block';
 const sectionTitles = [
   'home',
   'about',
@@ -18,6 +20,7 @@ const sectionTitles = [
 ];
 const numOfSections = sectionTitles.length;
 let slideAnimations = {};
+let slideAnimationsOut = {};
 
 function generateSlideAnimations(win) {
   slideAnimations = {
@@ -27,14 +30,14 @@ function generateSlideAnimations(win) {
         translateX: [win.innerWidth, 0],
         delay: 25,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 400
       },
       {
         targets: '.slide__button--wrapper',
         translateX: [-win.innerWidth, 0],
         delay: 50,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 400
       }
     ],
     slide1: [
@@ -43,28 +46,28 @@ function generateSlideAnimations(win) {
         scale: [0, 1],
         delay: 25,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 275
       },
       {
         targets: '.circle--two',
         scale: [0, 1],
-        delay: 250,
+        delay: 110,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 275
       },
       {
         targets: '.circle--three',
         scale: [0, 1],
-        delay: 475,
+        delay: 200,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 275
       },
       {
         targets: '.info__container--circles',
         translateY: [win.innerHeight, 0],
-        delay: 250,
+        delay: 200,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 275
       }
     ],
     slide2: [
@@ -73,42 +76,135 @@ function generateSlideAnimations(win) {
         scale: [0, 1],
         delay: 50,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 200
       },
       {
         targets: '.gold',
         scale: [0, 1],
         delay: 100,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 200
       },
       {
         targets: '.photo',
         scale: [0, 1],
         delay: 150,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 200
       },
       {
         targets: '.web',
         scale: [0, 1],
         delay: 200,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 200
       },
       {
         targets: '.video',
         scale: [0, 1],
         delay: 250,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 200
       },
       {
         targets: '.info__container--icons',
         translateY: [win.innerHeight, 0],
-        delay: 150,
+        delay: 200,
         easing: "easeOutCirc",
-        duration: 440
+        duration: 250
+      }
+    ]
+  };
+
+  slideAnimationsOut = {
+    slide0: [
+      {
+        targets: '.splash__container',
+        translateX: [0, -win.innerWidth],
+        delay: 25,
+        easing: "linear",
+        duration: 400
+      },
+      {
+        targets: '.slide__button--wrapper',
+        translateX: [0, win.innerWidth],
+        delay: 50,
+        easing: "linear",
+        duration: 400
+      }
+    ],
+    slide1: [
+      {
+        targets: '.circle--one',
+        scale: [1, 0],
+        delay: 25,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.circle--two',
+        scale: [1, 0],
+        delay: 110,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.circle--three',
+        scale: [1, 0],
+        delay: 200,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.info__container--circles',
+        translateY: [0, win.innerHeight],
+        delay: 25,
+        easing: "linear",
+        duration: 250
+      }
+    ],
+    slide2: [
+      {
+        targets: '.blue',
+        scale: [1, 0],
+        delay: 50,
+        easing: "linear",
+        duration: 200
+      },
+      {
+        targets: '.gold',
+        scale: [1, 0],
+        delay: 100,
+        easing: "linear",
+        duration: 200
+      },
+      {
+        targets: '.photo',
+        scale: [1, 0],
+        delay: 150,
+        easing: "linear",
+        duration: 200
+      },
+      {
+        targets: '.web',
+        scale: [1, 0],
+        delay: 200,
+        easing: "linear",
+        duration: 200
+      },
+      {
+        targets: '.video',
+        scale: [1, 0],
+        delay: 250,
+        easing: "linear",
+        duration: 200
+      },
+      {
+        targets: '.info__container--icons',
+        translateY: [0, win.innerHeight],
+        delay: 50,
+        easing: "linear",
+        duration: 250
       }
     ]
   };
@@ -118,6 +214,7 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      previousIndex: 0,
       slideIndex: 0
     };
   }
@@ -126,19 +223,38 @@ export default class Index extends React.Component {
     if (window) {
       generateSlideAnimations(window);
     }
+
+    this.refs.slide1.style.display = DISPLAY_NONE;
+    this.refs.slide2.style.display = DISPLAY_NONE;
   }
 
   componentDidUpdate() {
-    const animations = slideAnimations[`slide${this.state.slideIndex}`];
-    if (animations) {
-      for (let animation of animations) {
+    const slideInName = `slide${this.state.slideIndex}`;
+    const slideOutName = `slide${this.state.previousIndex}`;
+
+    const animations = slideAnimations[slideInName];
+    const outAnimations = slideAnimationsOut[slideOutName];
+
+    if (outAnimations) {
+      for (let animation of outAnimations) {
         anime(animation);
       }
     }
+
+    setTimeout(() => {
+      this.refs[slideOutName].style.display = DISPLAY_NONE;
+      this.refs[slideInName].style.display = DISPLAY_BLOCK;
+
+      if (animations) {
+        for (let animation of animations) {
+          anime(animation);
+        }
+      }
+    }, 500);
   }
 
   _handleKeyboardArrows(e, increment) {
-    this._handleArrowClick(e, true);
+    this._handleArrowClick(e, increment);
   }
 
   _handleArrowClick(e, increment) {
@@ -148,6 +264,7 @@ export default class Index extends React.Component {
     const nextIndex = increment ? (currentIndex + 1) : (currentIndex - 1)
 
     this.setState({
+      previousIndex: currentIndex,
       slideIndex: nextIndex < 0 ? numOfSections - 1 : nextIndex % numOfSections
     });
   }
@@ -157,6 +274,7 @@ export default class Index extends React.Component {
 
     if (index != this.state.slideIndex) {
       this.setState({
+        previousIndex: this.state.slideIndex,
         slideIndex: index
       });
     }
@@ -228,6 +346,7 @@ export default class Index extends React.Component {
           <div className="page__wrapper home">
             <div className="slideshow">
               <div
+                ref="slide0"
                 className={
                   classNames(
                     "slide__layout",
@@ -264,6 +383,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div
+                ref="slide1"
                 className={
                   classNames(
                     "slide__layout",
@@ -296,6 +416,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div
+                ref="slide2"
                 className={
                   classNames(
                     "slide__layout",

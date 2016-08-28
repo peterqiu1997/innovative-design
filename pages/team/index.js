@@ -191,13 +191,6 @@ export default class Index extends React.Component {
         photo: '/img/officers/davinci.jpg'
       },
       {
-        name: 'Allan Peng',
-        tagline: 'imma bee imma bee imma bee',
-        title: 'Facilitator',
-        tier: 'Photo Decal',
-        photo: '/img/officers/allan.jpg'
-      },
-      {
         name: 'Margaret Zhou',
         tagline: 'margiemARgiemargaretmARgaret',
         title: 'Facilitator',
@@ -222,6 +215,12 @@ export default class Index extends React.Component {
         tagline: 'diversity hire',
         title: 'Advisor',
         photo: '/img/officers/ben.jpg'
+      },
+      {
+        name: 'Allan Peng',
+        tagline: 'imma bee imma bee imma bee',
+        title: 'Advisor',
+        photo: '/img/officers/allan.jpg'
       },
       {
         name: 'Jordan Said',

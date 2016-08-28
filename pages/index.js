@@ -11,7 +11,12 @@ import _ from 'lodash';
 import Logo, { LOGO_TEXT, LOGO_ICON } from './components/logo';
 import Typing from './components/typing';
 
-const numOfSections = 4;
+const sectionTitles = [
+  'home',
+  'about',
+  'tiers'
+];
+const numOfSections = sectionTitles.length;
 let slideAnimations = {};
 
 function generateSlideAnimations(win) {
@@ -105,37 +110,7 @@ function generateSlideAnimations(win) {
         easing: "easeOutCirc",
         duration: 440
       }
-    ],
-    slide3: [
-      {
-        targets: '.fb',
-        scale: [0, 1],
-        delay: 25,
-        easing: "easeOutCirc",
-        duration: 440
-      },
-      {
-        targets: '.twitter',
-        scale: [0, 1],
-        delay: 250,
-        easing: "easeOutCirc",
-        duration: 440
-      },
-      {
-        targets: '.ig',
-        scale: [0, 1],
-        delay: 475,
-        easing: "easeOutCirc",
-        duration: 440
-      },
-      {
-        targets: '.info__container--media',
-        translateY: [win.innerHeight, 0],
-        delay: 150,
-        easing: "easeOutCirc",
-        duration: 440
-      }
-    ],
+    ]
   };
 }
 
@@ -177,6 +152,16 @@ export default class Index extends React.Component {
     });
   }
 
+  _handleDotsClick(e, index) {
+    e.preventDefault();
+
+    if (index != this.state.slideIndex) {
+      this.setState({
+        slideIndex: index
+      });
+    }
+  }
+
   render () {
     const stringsToType = [
       'Design',
@@ -186,6 +171,28 @@ export default class Index extends React.Component {
       'Videography',
       'Design'
     ];
+
+    const navDots = _.map(sectionTitles, (title, idx) => {
+      return (
+        <li
+          key={ `dots-${idx}` }
+          className="dot"
+          onClick={ (e) => { this._handleDotsClick(e, idx); } }
+        >
+          <div
+            className="dot__tooltip"
+          >
+            { title }
+          </div>
+          <div
+            className={ classNames('circle', {
+              'circle--active': this.state.slideIndex === idx
+            }) }
+          >
+          </div>
+        </li>
+      );
+    });
 
     return (
       <DocumentTitle title="Innovative Design">
@@ -356,62 +363,26 @@ export default class Index extends React.Component {
                   </p>
                 </div>
               </div>
-              <div
-                className={
-                  classNames(
-                    "slide__layout",
-                    "slide__layout--4",
-                    {
-                      "slide__layout--selected": this.state.slideIndex === 3
-                    }
-                  )
-                }
-              >
-                <div className="media__container">
-                  <a href="https://www.facebook.com/InnovativeDesignUCB/">
-                    <FontAwesome
-                      className="media__icon fb"
-                      name="facebook"
-                      size="3x"
-                      style={{ color: '#3b5998' }}
-                    />
-                  </a>
-                  <a href="https://twitter.com/innodatcal">
-                    <FontAwesome
-                      className="media__icon twitter"
-                      name="twitter"
-                      size="3x"
-                      style={{ color: '#00aced' }}
-                    />
-                  </a>
-                  <a href="https://www.instagram.com/innodatcal/">
-                    <FontAwesome
-                      className="media__icon ig"
-                      name="instagram"
-                      size="3x"
-                      style={{ color: '#8a3ab9' }}
-                    />
-                  </a>
-                </div>
-                <div className="info__container--media">
-                  Follow us on social media for event updates and more!
-                </div>
-              </div>
             </div>
             <div className="slideshow__nav">
+              <div className="slideshow__dots">
+                <ul className="dots">
+                  { navDots }
+                </ul>
+              </div>
               <div className="slideshow__arrows">
                 <div
                   className="arrow arrow--left"
                   onClick={(e) => { this._handleArrowClick(e, false) }}
                 >
-                  <div className="arrow__bar"></div>
+                  <div className="text">back</div>
                   <div className="arrow__triangle"></div>
                 </div>
                 <div
                   className="arrow arrow--right"
                   onClick={(e) => { this._handleArrowClick(e, true) }}
                 >
-                  <div className="arrow__bar"></div>
+                  <div className="text">next</div>
                   <div className="arrow__triangle"></div>
                 </div>
               </div>

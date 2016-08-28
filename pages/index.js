@@ -352,7 +352,7 @@ export default class Index extends React.Component {
                     event recap videos and Kickstarter campaigns.
                   </p>
                   <p>
-                    Click on each icon to learn more about the tier or visit <b><a href="http://makeberkeleybeautiful.com">makeberkeleybeautiful.com</a></b> for a full portfolio.
+                    Click on each icon to learn more about the tier or visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.
                   </p>
                 </div>
               </div>

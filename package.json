@@ -47,7 +47,16 @@
     "cssnano": "^3.5.2",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.1"
+    "eslint-plugin-react": "^4.2.1",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.3",
+    "imagemin": "^5.2.2",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngcrush": "^5.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-svgo": "^5.2.0"
   },
   "keywords": [
     "gatsby"
@@ -55,6 +64,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public ."
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "compressImages": "./node_modules/.bin/gulp images --verbose"
   }
 }

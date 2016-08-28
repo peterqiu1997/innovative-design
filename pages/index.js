@@ -384,6 +384,9 @@ export default class Index extends React.Component {
               </div>
               <div
                 ref="slide1"
+                style={{
+                  display: DISPLAY_NONE
+                }}
                 className={
                   classNames(
                     "slide__layout",
@@ -417,6 +420,9 @@ export default class Index extends React.Component {
               </div>
               <div
                 ref="slide2"
+                style={{
+                  display: DISPLAY_NONE
+                }}
                 className={
                   classNames(
                     "slide__layout",

@@ -49,14 +49,7 @@
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.1",
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.0.3",
-    "imagemin": "^5.2.2",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngcrush": "^5.0.0",
-    "imagemin-pngquant": "^5.0.0",
-    "imagemin-svgo": "^5.2.0"
+    "gulp-imageoptim": "^1.0.4"
   },
   "keywords": [
     "gatsby"

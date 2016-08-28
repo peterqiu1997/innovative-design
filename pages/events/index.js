@@ -17,7 +17,7 @@ export default class Index extends React.Component {
       <ul className="timeline">
         <li className="event" data-date="August 29, 2016">
           <h3>Decal Infosession</h3>
-          <h4 className="hidden__date">September 7, 2016</h4>
+          <h4 className="hidden__date">August 29, 2016</h4>
           <p>
             Are you interested in graphic design or photography but have no experience?
             Come out to our decal infosession to learn more about the decals we offer!

@@ -51,6 +51,13 @@ export default class Index extends React.Component {
         photo: '/img/officers/natasha.jpg'
       },
       {
+        name: 'Julia Sun',
+        tagline: '1ce qube',
+        title: 'Technology',
+        tier: 'Web Tier',
+        photo: '/img/officers/julia.jpg'
+      },
+      {
         name: 'Alven Wang',
         tagline: 'detail oriented team player who thinks outside the box',
         title: 'Design Services',
@@ -77,13 +84,6 @@ export default class Index extends React.Component {
         title: 'External',
         tier: 'Gold Tier',
         photo: '/img/officers/davidx.jpg'
-      },
-      {
-        name: 'Julia Sun',
-        tagline: '1ce qube',
-        title: 'Technology',
-        tier: 'Web Tier',
-        photo: '/img/officers/julia.jpg'
       },
       {
         name: 'Roya Chagnon',

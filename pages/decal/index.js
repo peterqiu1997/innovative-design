@@ -78,7 +78,10 @@ export default class Index extends React.Component {
           key={ `lessonElem-${index}` }
           className="lesson"
         >
-          <a className="lesson__link" href={ prefixLink(lesson.url) }>
+          <a
+            className="lesson__link"
+            href={ lesson.url ? prefixLink(lesson.url) : '' }
+          >
             <div
               className="lesson__photo"
               style={{

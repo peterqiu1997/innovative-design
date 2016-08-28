@@ -191,6 +191,13 @@ export default class Index extends React.Component {
         photo: '/img/officers/davinci.jpg'
       },
       {
+        name: 'Allan Peng',
+        tagline: 'imma bee imma bee imma bee',
+        title: 'Facilitator',
+        tier: 'Photo Decal',
+        photo: '/img/officers/allan.jpg'
+      },
+      {
         name: 'Margaret Zhou',
         tagline: 'margiemARgiemargaretmARgaret',
         title: 'Facilitator',

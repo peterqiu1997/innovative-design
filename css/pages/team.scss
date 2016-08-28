@@ -40,7 +40,7 @@
 
         .officer__detail--name {
           font-size: 1.5rem;
-          margin-bottom: 5px;
+          margin-bottom: 8px;
           text-transform: uppercase;
 
           @media (max-width: 770px) {
@@ -49,7 +49,8 @@
         }
 
         .officer__detail--tagline {
-          margin-bottom: 5px;
+          margin-bottom: 8px;
+          padding: 5px;
 
           @media (max-width: 770px) {
             font-size: 1rem;
@@ -62,6 +63,8 @@
 
         .officer__detail--title {
           font-size: 1.25rem;
+          margin-top: 10px;
+          margin-bottom: 5px;
 
           @media (max-width: 770px) {
             font-size: 1rem;
@@ -87,7 +90,7 @@
         width: 0;
         height: 100%;
         background: $white;
-        opacity: 0.45;
+        opacity: 0.6;
         -webkit-transition: width 500ms;
         -moz-transition: width 500ms;
         -o-transition: width 500ms;
@@ -178,7 +181,7 @@
 
         .marketing__detail--name {
           font-size: 1.5rem;
-          margin-bottom: 5px;
+          margin-bottom: 8px;
           text-transform: uppercase;
 
           @media (max-width: 770px) {
@@ -188,7 +191,7 @@
 
         .marketing__detail--tagline {
           padding: 5px;
-          margin-bottom: 5px;
+          margin-bottom: 8px;
 
           @media (max-width: 770px) {
             font-size: 1rem;
@@ -206,7 +209,7 @@
         width: 0;
         height: 100%;
         background: $white;
-        opacity: 0.45;
+        opacity: 0.6;
         -webkit-transition: width 500ms;
         -moz-transition: width 500ms;
         -o-transition: width 500ms;

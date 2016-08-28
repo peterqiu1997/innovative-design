@@ -40,13 +40,22 @@ export default class Index extends React.Component {
     const officers = [
       {
         name: 'Jacqueline Woo',
+        tagline: 'where\'s the selfie stick',
         title: 'President',
         photo: '/img/officers/jackie.jpg'
       },
       {
         name: 'Natasha Welingkar',
+        tagline: 'never not laughing',
         title: 'President',
         photo: '/img/officers/natasha.jpg'
+      },
+      {
+        name: 'Julia Sun',
+        tagline: '1ce qube',
+        title: 'Technology',
+        tier: 'Web Tier',
+        photo: '/img/officers/julia.jpg'
       },
       {
         name: 'Alven Wang',
@@ -75,13 +84,6 @@ export default class Index extends React.Component {
         title: 'External',
         tier: 'Gold Tier',
         photo: '/img/officers/davidx.jpg'
-      },
-      {
-        name: 'Julia Sun',
-        tagline: '1ce qube',
-        title: 'Technology',
-        tier: 'Web Tier',
-        photo: '/img/officers/julia.jpg'
       },
       {
         name: 'Roya Chagnon',
@@ -113,6 +115,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Peter Phan',
+        tagline: 'photo slave',
         title: 'Recollections',
         tier: 'Photo Tier',
         photo: '/img/officers/peter.jpg'
@@ -161,12 +164,14 @@ export default class Index extends React.Component {
       },
       {
         name: 'Jason Mai',
+        tagline: 'worst behavior',
         title: 'Advisor',
         tier: 'Graphic Design Principles and Photo Decals',
         photo: '/img/officers/jason.jpg'
       },
       {
         name: 'Brandon Chau',
+        tagline: 'photo senpai',
         title: 'Advisor',
         tier: 'Photo Decal',
         photo: '/img/officers/brandon.jpg'
@@ -210,6 +215,12 @@ export default class Index extends React.Component {
         tagline: 'diversity hire',
         title: 'Advisor',
         photo: '/img/officers/ben.jpg'
+      },
+      {
+        name: 'Allan Peng',
+        tagline: 'imma bee imma bee imma bee',
+        title: 'Advisor',
+        photo: '/img/officers/allan.jpg'
       },
       {
         name: 'Jordan Said',

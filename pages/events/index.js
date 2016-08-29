@@ -36,8 +36,8 @@ export default class Index extends React.Component {
             Innovative Design and each of the different tiers.
           </p>
           <div className="button__wrapper">
-            <a href="">
-              <button className="info__button" disabled>rsvp</button>
+            <a href="https://www.facebook.com/events/536608159860227/" target="_blank">
+              <button className="info__button">rsvp</button>
             </a>
           </div>
         </li>

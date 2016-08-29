@@ -227,6 +227,12 @@ export default class Index extends React.Component {
         tagline: 'Doing too much. Asha?',
         title: 'Advisor',
         photo: '/img/officers/jordan.jpg'
+      },
+      {
+        name: 'Lancy Zhang',
+        tagline: 'happily and perpetually lost',
+        title: 'Advisor',
+        photo: '/img/officers/lancy.jpg'
       }
     ];
 

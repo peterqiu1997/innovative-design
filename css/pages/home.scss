@@ -7,6 +7,7 @@
     overflow: hidden;
     max-width: $global-max-width;
     margin: 6% auto 0;
+    padding-bottom: 48px;
 
     @media (max-width: 620px) {
       margin-top: 12%;
@@ -339,16 +340,7 @@
     width: 100%;
     padding: 0;
     text-align: center;
-    transition: background 250ms;
-
-    &:hover {
-      background: rgba($white, 0.98);
-    }
-
-    @media (max-width: 880px) {
-      padding: 20px 0;
-      background: rgba($white, 0.98);
-    }
+    background: rgba($white, 0.90);
 
     ul.dots {
       li.dot {

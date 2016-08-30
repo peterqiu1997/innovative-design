@@ -342,6 +342,10 @@
     text-align: center;
     background: rgba($white, 0.95);
 
+    @media (max-width: 880px) {
+      padding: 24px 0;
+    }
+
     ul.dots {
       li.dot {
         display: inline-block;

@@ -19,7 +19,7 @@ export default class Index extends React.Component {
           <div className="page__wrapper lesson">
             <h1 className="section__title">Lesson One</h1>
             <div className="button__wrapper">
-              <a href="">
+              <a href="https://www.dropbox.com/sh/zvd57h13pfzt62c/AACbun9oc0aVlajzfY0ieOpla?dl=0">
                 <button className="download__button">
                   download files
                 </button>
@@ -43,7 +43,7 @@ export default class Index extends React.Component {
               <div className="lesson__section--description right">
                 <div className="lesson__section--subtitle">homework</div>
                 <div className="lesson__section--info">
-                  This week's homework is to get you comfortable with finding your away around Illustrator on your own! 
+                  This week's homework is to get you comfortable with finding your away around Illustrator on your own!
                   Follow the tutorial we did in class to make another cool pattern.
                 </div>
               </div>

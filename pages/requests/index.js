@@ -252,8 +252,6 @@ export default class Index extends React.Component {
       questions: this.refs.questions.value
     };
 
-    console.log(jsonPayload);
-
     if (!submissionIsValid(jsonPayload)) {
       return;
     }

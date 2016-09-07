@@ -18,7 +18,8 @@ export default class Index extends React.Component {
       {
         number: 'Lesson 1',
         title: 'Intro to Illustrator',
-        img: '/img/decal/lesson1.png'
+        img: '/img/decal/lesson1.png',
+        url: '/decal/lesson-1/'
       },
       {
         number: 'Lesson 2',

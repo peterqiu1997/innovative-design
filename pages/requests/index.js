@@ -76,7 +76,7 @@ export default class Index extends React.Component {
           })
         }
       >
-        <button id="form__submit" type="submit" disabled>
+        <button id="form__submit" type="submit">
           submit
         </button>
       </div>

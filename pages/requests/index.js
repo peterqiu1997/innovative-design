@@ -342,10 +342,7 @@ export default class Index extends React.Component {
                   display: this.state.sent && !this.state.sentError ? "none" : "block"
                 }}
               >
-                <b style={{ color: '#F44336' }}>
-                  Requests are closed for Fall 2016 recruitment.  You will not be able to submit requests
-                  through this form until then.  Thank you for your cooperation.
-                </b>
+                Please submit design requests through the form below.
               </div>
               <div className="request__form">
                 { formBody }

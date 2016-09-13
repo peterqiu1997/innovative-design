@@ -24,7 +24,8 @@ export default class Index extends React.Component {
       {
         number: 'Lesson 2',
         title: 'Pen Tool',
-        img: '/img/decal/lesson2.png'
+        img: '/img/decal/lesson2.png',
+        url: '/decal/lesson-2/'
       },
       {
         number: 'Lesson 3',

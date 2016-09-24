@@ -261,7 +261,7 @@ export default class Index extends React.Component {
       request: jsonPayload
     });
 
-    Request.post('http://innodapi.westus.cloudapp.azure.com/request', jsonPayload, {
+    Request.post('http://sheets.innovativedesign.club/request', jsonPayload, {
       headers: {
         'X-Api-Version': 'kitty/v1'
       }

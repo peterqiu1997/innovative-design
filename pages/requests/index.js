@@ -5,7 +5,7 @@ import DocumentTitle from 'react-document-title';
 import Dropdown from 'react-dropdown';
 import MaskedInput from 'react-maskedinput';
 import moment from 'moment';
-import Request from 'axios';
+import request from 'superagent';
 
 import { prefixLink } from 'gatsby-helpers';
 
@@ -261,15 +261,17 @@ export default class Index extends React.Component {
       request: jsonPayload
     });
 
-    Request.post('http://sheets.innovativedesign.club/request', jsonPayload, {
-      headers: {
-        'X-Api-Version': 'kitty/v1'
-      }
-    }).then((response) => {
-      this._handleSubmissionSuccess();
-    }).catch((error) => {
-      this._handleSubmissionError(error);
-    });
+    request
+      .post('http://sheets.innovativedesign.club/request')
+      .send(jsonPayload)
+      .set('X-Api-Version', 'kitty/v1')
+      .end((err, res) => {
+        if (err) {
+          this._handleSubmissionError(err);
+        } else {
+          this._handleSubmissionSuccess();
+        }
+      });
   }
 
   _handleSubmissionError(error) {

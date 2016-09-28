@@ -43,7 +43,7 @@ export default class Index extends React.Component {
               <div className="lesson__section--description right">
                 <div className="lesson__section--subtitle">homework</div>
                 <div className="lesson__section--info">
-                  Create a poster of a landmark using the pen tool. Stylize your poster by applying brushes to your paths!
+                  Create a poster of a landmark using the pen tool. Stylize your poster by applying brushes to your paths! Or, create a low-poly illustration of any photograph based on the techniques taught in class.
                 </div>
               </div>
             </div>

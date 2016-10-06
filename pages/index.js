@@ -374,9 +374,9 @@ export default class Index extends React.Component {
                     className="slide__button slide__button--1"
                     style={{ backgroundImage: `url("${prefixLink('/img/club-one.jpg')}")` }}
                   ></div>
-                  <a href="http://apply.innovativedesign.club">
+                  <a href="http://makeberkeleybeautiful.com" target="_blank">
                     <div className="slide__button slide__button--2">
-                      <div className="apply__text">join our team</div>
+                      <div className="apply__text">portfolio</div>
                       <div className="slide__fill"></div>
                     </div>
                   </a>
@@ -486,7 +486,7 @@ export default class Index extends React.Component {
                     event recap videos and Kickstarter campaigns.
                   </p>
                   <p>
-                    Click on each icon to learn more about the tier or visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.
+                    Visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.
                   </p>
                 </div>
               </div>

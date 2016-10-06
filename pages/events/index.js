@@ -49,8 +49,8 @@ export default class Index extends React.Component {
             and open to all Cal students.  Check out workshops from last semester in the event website below!
           </p>
           <div className="button__wrapper">
-            <a href="">
-              <button className="info__button" disabled>rsvp</button>
+            <a href="https://www.facebook.com/events/1577024075937933/">
+              <button className="info__button">rsvp</button>
             </a>
             <a href="http://hex.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>

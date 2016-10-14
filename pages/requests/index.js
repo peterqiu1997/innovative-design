@@ -21,8 +21,7 @@ const campusTypes = [
 const projectTypes = [
   'Graphic Design',
   'Photography',
-  'Videography',
-  'Web Design'
+  'Videography'
 ];
 
 function submissionIsValid(properties) {
@@ -345,6 +344,13 @@ export default class Index extends React.Component {
                 }}
               >
                 Please submit design requests through the form below.
+                <p
+                  style={{
+                    color: 'red'
+                  }}
+                >
+                  <b>Web Design</b> requests are closed for the semester.  We apologize for any inconvenience.
+                </p>
               </div>
               <div className="request__form">
                 { formBody }

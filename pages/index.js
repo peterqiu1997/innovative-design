@@ -434,36 +434,26 @@ export default class Index extends React.Component {
                 }
               >
                 <div className="icons__container">
-                  <a href="http://makeberkeleybeautiful.com/blue">
-                    <div
-                      className="icon blue"
-                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/blue.png')}")` }}
-                    ></div>
-                  </a>
-                  <a href="http://makeberkeleybeautiful.com/gold">
-                    <div
-                      className="icon gold"
-                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/gold.png')}")` }}
-                    ></div>
-                  </a>
-                  <a href="http://makeberkeleybeautiful.com/photo">
-                    <div
-                      className="icon photo"
-                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
-                    ></div>
-                  </a>
-                  <a href="http://makeberkeleybeautiful.com/web">
-                    <div
-                      className="icon web"
-                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
-                    ></div>
-                  </a>
-                  <a href="http://makeberkeleybeautiful.com/video">
-                    <div
-                      className="icon video"
-                      style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
-                    ></div>
-                  </a>
+                  <div
+                    className="icon blue"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/blue.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon gold"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/gold.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon photo"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/photo.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon web"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
+                  ></div>
+                  <div
+                    className="icon video"
+                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
+                  ></div>
                 </div>
                 <div className="info__container--icons">
                   <p>

@@ -19,7 +19,6 @@ const campusTypes = [
 ];
 
 const projectTypes = [
-  'Graphic Design',
   'Photography',
   'Videography'
 ];
@@ -349,7 +348,7 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>Web Design</b> requests are closed for the semester.  We apologize for any inconvenience.
+                  <b>Web Design</b> and <b>Graphic Design</b> requests are closed for the semester.  We apologize for any inconvenience.
                 </p>
               </div>
               <div className="request__form">

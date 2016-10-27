@@ -304,10 +304,18 @@ export default class Index extends React.Component {
         <div className="thanks">Thank you!</div>
         <p>
           Your message has been sent.
-          An officer should be reaching out to you in a couple days to discuss the details of the project.
+          Due to the large volume of requests, an officer should be reaching out to you within 2 weeks to discuss the details of the project.
         </p>
         <p>
           Feel free to reach out to <a href="mailto:innovativedesignatcal@gmail.com">innovativedesignatcal@gmail.com</a> with additional questions.
+        </p>
+        <p
+          style={{
+            color: 'red'
+          }}
+        >
+          If you submitted a Web or Graphic Design request, we want to reiterate that these requests are closed for
+          the semester and we will not be getting back to them!  Please submit another request next semester.
         </p>
       </div>
     );

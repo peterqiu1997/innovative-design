@@ -20,7 +20,6 @@ const campusTypes = [
 
 const projectTypes = [
   'Photography',
-  'Videography'
 ];
 
 function submissionIsValid(properties) {
@@ -314,8 +313,8 @@ export default class Index extends React.Component {
             color: 'red'
           }}
         >
-          If you submitted a Web or Graphic Design request, we want to reiterate that these requests are closed for
-          the semester and we will not be getting back to them!  Please submit another request next semester.
+          <b>If you submitted a request that is **NOT** Photography related, we want to reiterate that all design requests are closed for
+          the semester and we will not be getting back to them!  Please submit another request next semester.</b>
         </p>
       </div>
     );
@@ -356,7 +355,7 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>Web Design</b> and <b>Graphic Design</b> requests are closed for the semester.  We apologize for any inconvenience.
+                  <b>ATTENTION!! ALL requests besides Photography are closed for the semester.  We apologize for any inconvenience</b>.
                 </p>
               </div>
               <div className="request__form">

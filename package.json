@@ -14,7 +14,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.0.6",
-    "gatsby": "^0.12.5",
+    "gatsby": "0.12.12",
     "highlight.js": "^9.2.0",
     "history": "^2.0.1",
     "jquery": "^2.2.2",

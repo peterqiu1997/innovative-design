@@ -155,7 +155,8 @@ export default class Index extends React.Component {
           <Datepicker
             name="deadline" {...dateProps}
             placeholderText="deadline" id="deadline"
-            excludeDates={[moment(), moment().add(14, 'days')]}
+            minDate={moment().add(14, 'days')}
+            maxDate={moment('2016-12-02')}
           />
         </div>
         <div className="input__container">

@@ -19,7 +19,10 @@ const campusTypes = [
 ];
 
 const projectTypes = [
-  'Photography',
+  'Graphic Design',
+  'Web Design',
+  'Videography',
+  'Photography'
 ];
 
 function submissionIsValid(properties) {
@@ -73,7 +76,7 @@ export default class Index extends React.Component {
           })
         }
       >
-        <button id="form__submit" type="submit">
+        <button id="form__submit" type="submit" disabled>
           submit
         </button>
       </div>
@@ -356,7 +359,7 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>ATTENTION!! ALL requests besides Photography are closed for the semester.  We apologize for any inconvenience</b>.
+                  <b>ATTENTION!! ALL requests for the semester.  You will not be able to submit a request until next semester.  We apologize for any inconvenience</b>.
                 </p>
               </div>
               <div className="request__form">

@@ -48,6 +48,7 @@
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.1",
+    "gh-pages": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-imageoptim": "^1.0.4"
   },
@@ -58,6 +59,7 @@
   "main": "n/a",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "compressImages": "./node_modules/.bin/gulp images --verbose"
+    "compressImages": "./node_modules/.bin/gulp images --verbose",
+    "deploy": "gatsby build --prefix-links && gh-pages -d public"
   }
 }

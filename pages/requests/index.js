@@ -359,7 +359,7 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>ATTENTION!! ALL requests for the semester.  You will not be able to submit a request until next semester.  We apologize for any inconvenience</b>.
+                  <b>ATTENTION!! ALL requests are closed for the semester.  You will not be able to submit a request until next semester.  We apologize for any inconvenience</b>.
                 </p>
               </div>
               <div className="request__form">

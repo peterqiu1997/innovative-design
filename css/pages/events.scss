@@ -1,4 +1,13 @@
 .events {
+  .info {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Raleway';
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  
   .timeline {
     font-family: 'Raleway';
     border-left: 4px solid $blue;

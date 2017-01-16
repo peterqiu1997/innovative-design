@@ -159,7 +159,7 @@ export default class Index extends React.Component {
             name="deadline" {...dateProps}
             placeholderText="deadline" id="deadline"
             minDate={moment().add(14, 'days')}
-            maxDate={moment('2017-5-01')}
+            maxDate={moment('2017-05-01')}
           />
         </div>
         <div className="input__container">

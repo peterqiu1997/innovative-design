@@ -325,6 +325,40 @@
           }
         }
       }
+      
+      &.slide__layout--4 {
+        .decal__container {
+          max-width: $global-max-width;
+          text-align: center;
+          padding: 0 12px;
+          
+          .decal {
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            margin: 0px 20px;
+            background-position: center center;
+            background-size: cover;
+          }
+        }
+        
+        .decal__container--decals {
+          max-width: 900px;
+          padding: 0 24px;
+          margin: 48px auto;
+          font-size: 18px;
+          font-family: 'Raleway';
+          
+          b {
+            color: $blue;
+          }
+          
+          a {
+            text-decoration: underline;
+            color: $blue;
+          }
+        }
+      }
     }
   }
 

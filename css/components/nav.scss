@@ -7,7 +7,7 @@
   width: 100%;
   overflow: hidden;
 
-  @media (max-width: 720px) {
+  @media (max-width: 820px) {
     transition: max-height 250ms;
     box-shadow: 0 1px 1px 1px rgba($grey, 0.15);
 
@@ -120,7 +120,7 @@
     }
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 820px) {
     .nav__wrapper {
       .nav__item {
         display: block;

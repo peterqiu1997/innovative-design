@@ -159,7 +159,7 @@ export default class Index extends React.Component {
             name="deadline" {...dateProps}
             placeholderText="deadline" id="deadline"
             minDate={moment().add(14, 'days')}
-            maxDate={moment('2016-12-02')}
+            maxDate={moment('2017-5-01')}
           />
         </div>
         <div className="input__container">
@@ -317,8 +317,6 @@ export default class Index extends React.Component {
             color: 'red'
           }}
         >
-          <b>If you submitted a request that is **NOT** Photography related, we want to reiterate that all design requests are closed for
-          the semester and we will not be getting back to them!  Please submit another request next semester.</b>
         </p>
       </div>
     );
@@ -359,7 +357,7 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>ATTENTION!! ALL requests are closed for the semester.  You will not be able to submit a request until next semester.  We apologize for any inconvenience</b>.
+                  <b>Requests are closed until the start of the semester.  Please check back!</b>.
                 </p>
               </div>
               <div className="request__form">

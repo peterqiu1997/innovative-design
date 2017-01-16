@@ -142,19 +142,9 @@
       }
 
       &.input__container--half {
-        display: inline-block;
-        margin-right: 4%;
-        width: 48%;
-
-        &.last {
-          margin-right: 0;
-        }
-
-        @media (max-width: 720px) {
-          display: block;
-          width: 100%;
-          margin: 48px 0;
-        }
+        display: block;
+        margin: 48px 0;
+        width: 100%;
       }
     }
 

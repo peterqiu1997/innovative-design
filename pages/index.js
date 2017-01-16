@@ -16,7 +16,8 @@ const DISPLAY_BLOCK = 'block';
 const sectionTitles = [
   'home',
   'about',
-  'tiers'
+  'tiers',
+  'decals'
 ];
 const numOfSections = sectionTitles.length;
 let slideAnimations = {};
@@ -113,6 +114,36 @@ function generateSlideAnimations(win) {
         easing: "easeOutCirc",
         duration: 250
       }
+    ],
+    slide3: [
+      {
+        targets: '.decal--intro',
+        scale: [0, 1],
+        delay: 25,
+        easing: "easeOutCirc",
+        duration: 275
+      },
+      {
+        targets: '.decal--gdp',
+        scale: [0, 1],
+        delay: 110,
+        easing: "easeOutCirc",
+        duration: 275
+      },
+      {
+        targets: '.decal--photo',
+        scale: [0, 1],
+        delay: 200,
+        easing: "easeOutCirc",
+        duration: 275
+      },
+      {
+        targets: '.decal__container--decals',
+        translateY: [win.innerHeight, 0],
+        delay: 200,
+        easing: "easeOutCirc",
+        duration: 275
+      }
     ]
   };
 
@@ -200,9 +231,39 @@ function generateSlideAnimations(win) {
         duration: 200
       },
       {
-        targets: '.info__container--icons',
+        targets: '.decal__container--decals',
         translateY: [0, win.innerHeight],
         delay: 50,
+        easing: "linear",
+        duration: 250
+      }
+    ],
+    slide3: [
+      {
+        targets: '.decal--intro',
+        scale: [1, 0],
+        delay: 25,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.decal--gdp',
+        scale: [1, 0],
+        delay: 110,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.decal--photo',
+        scale: [1, 0],
+        delay: 200,
+        easing: "linear",
+        duration: 250
+      },
+      {
+        targets: '.info__container--circles',
+        translateY: [0, win.innerHeight],
+        delay: 25,
         easing: "linear",
         duration: 250
       }
@@ -477,6 +538,59 @@ export default class Index extends React.Component {
                   </p>
                   <p>
                     Visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.
+                  </p>
+                </div>
+              </div>
+              <div
+                ref="slide3"
+                style={{
+                  display: DISPLAY_NONE
+                }}
+                className={
+                  classNames(
+                    "slide__layout",
+                    "slide__layout--4",
+                    {
+                      "slide__layout--selected": this.state.slideIndex === 3
+                    }
+                  )
+                }
+              >
+                <div className="decal__container">
+                  <div 
+                    className="decal decal--intro"
+                    style={{ backgroundImage: `url("${prefixLink('/img/decal-info/intro.png')}")` }}
+                  ></div>
+                  <div 
+                    className="decal decal--gdp"
+                    style={{ backgroundImage: `url("${prefixLink('/img/decal-info/gdp.png')}")` }}
+                  ></div>
+                  <div 
+                    className="decal decal--photo"
+                    style={{ backgroundImage: `url("${prefixLink('/img/decal-info/photo.png')}")` }}
+                  ></div>
+                </div>
+                <div className="decal__container--decals">
+                  <p>
+                    Innovative Design also teaches 3 decals separate from the club that are open to the public.  You can
+                    register for these decals at the beginning of each semester at <b><a href="http://decal.berkeley.edu" target="_blank">decal.berkeley.edu</a></b>.
+                    Infosessions are mandatory, so check our <b>Events</b> tab or like us on Facebook for details and updates.
+                  </p>
+                  <p>
+                    <b>Intro to Photoshop and Illustrator</b> teaches graphic design through the use of Adobe Illustrator and Photoshop. 
+                    This class is built for students who do not have any prior experience or knowledge of these programs.
+                  </p>
+                  <p>
+                    <b>Graphic Design Principles</b> s a technical course in which students are taught extensive knowledge of Adobe programs (such as Illustrator and/or Photoshop). 
+                    The class also covers conceptual and theoretical aspects of design such as color theory, branding, and user interface design.
+                  </p>
+                  <p>
+                    <b>Photography Principles</b> is for students interested in learning photography. We start off with the basics (camera manipulations and shooting in RAW) and quickly 
+                    move onto composition rules and tricks to get better, more thought out photos, and from there move onto how to be a professional photographer, 
+                    photo ethics, and integrating art into photography.
+                  </p>
+                  <p>
+                    You can take a look at lessons and homework for each of these decals in the <b>Decal Students</b> tab above.
                   </p>
                 </div>
               </div>

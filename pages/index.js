@@ -581,7 +581,7 @@ export default class Index extends React.Component {
                     This class is built for students who do not have any prior experience or knowledge of these programs.
                   </p>
                   <p>
-                    <b>Graphic Design Principles</b> s a technical course in which students are taught extensive knowledge of Adobe programs (such as Illustrator and/or Photoshop). 
+                    <b>Graphic Design Principles</b> is a technical course in which students are taught extensive knowledge of Adobe programs (such as Illustrator and/or Photoshop). 
                     The class also covers conceptual and theoretical aspects of design such as color theory, branding, and user interface design.
                   </p>
                   <p>

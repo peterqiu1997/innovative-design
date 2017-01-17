@@ -15,9 +15,9 @@ export default class Index extends React.Component {
   render () {
     const timeline = (
       <ul className="timeline">
-        <li className="event" data-date="January 24, 2017">
+        <li className="event" data-date="January 26, 2017">
           <h3>Decal Infosession</h3>
-          <h4 className="hidden__date">January 24, 2017</h4>
+          <h4 className="hidden__date">January 26, 2017</h4>
           <p>
             Are you interested in graphic design or photography but have no experience?
             Come out to our decal infosession to learn more about the decals we offer!

@@ -24,7 +24,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="https://www.facebook.com/events/672621399554589/" target="_blank">
-              <button className="info__button" disabled>rsvp</button>
+              <button className="info__button" disabled>coming soon</button>
             </a>
           </div>
         </li>
@@ -37,7 +37,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="https://www.facebook.com/events/536608159860227/" target="_blank">
-              <button className="info__button" disabled>rsvp</button>
+              <button className="info__button" disabled>coming soon</button>
             </a>
           </div>
         </li>
@@ -50,7 +50,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="https://www.facebook.com/events/1577024075937933/">
-              <button className="info__button" disabled>rsvp</button>
+              <button className="info__button" disabled>coming soon</button>
             </a>
             <a href="http://hex.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>
@@ -66,7 +66,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="">
-              <button className="info__button" disabled>rsvp</button>
+              <button className="info__button" disabled>coming soon</button>
             </a>
             <a href="http://rgb.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>
@@ -82,7 +82,7 @@ export default class Index extends React.Component {
           </p>
           <div className="button__wrapper">
             <a href="https://www.facebook.com/events/1239658116091377/">
-              <button className="info__button" disabled>rsvp</button>
+              <button className="info__button" disabled>coming soon</button>
             </a>
             <a href="http://cmyk.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>
@@ -98,9 +98,8 @@ export default class Index extends React.Component {
           <div className="page__wrapper events">
             <h1 className="section__title">upcoming events</h1>
             <div className="info">
-              Here is the timeline for our public events this semester.  If you cannot click on the RSVP button, 
-              the Facebook event has not yet been made for the event.  You can check back here or like our Facebook page 
-              for updates.
+              Here is the timeline for our public events this semester.  "Coming Soon" means the Facebook event has not yet been made for the event.  
+              You can check back here or like our Facebook page for updates.
             </div>
             { timeline }
           </div>

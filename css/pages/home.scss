@@ -339,6 +339,22 @@
             margin: 0px 20px;
             background-position: center center;
             background-size: cover;
+            
+            @media (max-width: 950px) {
+              width: 200px;
+              height: 200px;
+            }
+            
+            @media (max-width: 750px) {
+              width: 150px;
+              height: 150px;
+            }
+            
+            @media (max-width: 600px) {
+              width: 100px;
+              height: 100px;
+              margin: 0px 10px;
+            }
           }
         }
         

@@ -19,61 +19,51 @@ export default class Index extends React.Component {
         number: 'Lesson 1',
         title: 'Intro to Illustrator',
         img: '/img/decal/lesson1.png',
-        url: '/decal/lesson-1/'
       },
       {
         number: 'Lesson 2',
         title: 'Pen Tool',
         img: '/img/decal/lesson2.png',
-        url: '/decal/lesson-2/'
       },
       {
         number: 'Lesson 3',
         title: 'Color',
         img: '/img/decal/lesson3.png',
-        url: '/decal/lesson-3/'
       },
       {
         number: 'Lesson 4',
         title: 'Brushes, Symbols, and Effects',
         img: '/img/decal/lesson4.png',
-        url: '/decal/lesson-4/'
       },
       {
         number: 'Lesson 5',
         title: 'Typography',
         img: '/img/decal/lesson5.png',
-        url: '/decal/lesson-5/'
       },
       {
         number: 'Lesson 6',
         title: 'Intro to Photoshop',
         img: '/img/decal/lesson6.png',
-        url: '/decal/lesson-6/'
       },
       {
         number: 'Lesson 7',
         title: 'Selection Tools and Masking',
         img: '/img/decal/lesson7.png',
-        url: '/decal/lesson-7/'
       },
       {
         number: 'Lesson 8',
         title: 'Blending, Layer Styles and Filter Effects',
         img: '/img/decal/lesson8.png',
-        url: '/decal/lesson-8/'
       },
       {
         number: 'Lesson 9',
         title: 'Combining Programs',
         img: '/img/decal/lesson9.png',
-        url: '/decal/lesson-9/'
       },
       {
         number: 'Lesson 10',
         title: 'Identity & Ad Design',
         img: '/img/decal/lesson10.png',
-        url: '/decal/lesson-10/'
       },
       {
         number: 'Lesson 11',

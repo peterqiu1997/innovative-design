@@ -43,7 +43,9 @@ export default class Index extends React.Component {
               <div className="lesson__section--description right">
                 <div className="lesson__section--subtitle">homework</div>
                 <div className="lesson__section--info">
-                  Create a poster of a landmark using the pen tool. Stylize your poster by applying brushes to your paths! Or, create a low-poly illustration of any photograph based on the techniques taught in class.
+                  Option 1 - low poly: create a low-poly art of any photograph — this can be a photograph of landscape, cityscape, animals, portraits, etc. For the sections that went over this topic, your facilitator should have showed you in class the steps on how to create low-poly art. 
+
+                  Option 2 - If you missed the low poly lesson: Create a poster of your favorite landmark/location using the pen tool, brushes, symbols and effects! Create your own brush by first pen tooling a cool design and then transforming it into a brush like what you learned to create the New York posters. Then create a cool, patterned background using your new brush! 
                 </div>
               </div>
             </div>

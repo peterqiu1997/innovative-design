@@ -43,7 +43,7 @@ export default class Index extends React.Component {
               <div className="lesson__section--description right">
                 <div className="lesson__section--subtitle">homework</div>
                 <div className="lesson__section--info">
-                  Make a promotional poster for a fictional sitcom. Use the selection tools and masking techniques from today's lesson to cut out and arrange the people you want to star in your show as well as the tools from last week to enhance the images you've chosen!
+                  Using the selection and masking tools from last week's lesson, create a surrealist photo by combining multiple images. The sea creatures in the wine bottle tutorial we did in class is a good example of manipulating the size and color of elements to create a surreal scene.
                 </div>
               </div>
             </div>

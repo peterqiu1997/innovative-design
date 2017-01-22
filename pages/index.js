@@ -473,7 +473,7 @@ export default class Index extends React.Component {
                   ></div>
                 </div>
                 <div className="info__container--circles">
-                  Innovative Design is a family of designers, photographers, web developers,
+                  Innovative Design is a family of graphic and web designers, photographers,
                   and videographers at the University of California, Berkeley. We are creative
                   individuals who are continuously evolving by collaborating, inspiring and
                   educating one another.

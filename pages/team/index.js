@@ -14,39 +14,16 @@ export default class Index extends React.Component {
 
   render () {
 
-    const marketing = [
-      {
-        name: 'Liz Wu',
-        tagline: 'rip me',
-        photo: '/img/officers/liz.jpg'
-      },
-      {
-        name: 'Sey Kim',
-        tagline: 'shrek is love. shrek is life.',
-        photo: '/img/officers/sey.jpg'
-      },
-      {
-        name: 'Irene Dea',
-        tagline: 'popoto',
-        photo: '/img/officers/irene.jpg'
-      },
-      {
-        name: 'David Bui',
-        tagline: 'lets dispel with this fiction i have any idea what i\'m doing',
-        photo: '/img/officers/davidb.jpg'
-      }
-    ];
-
     const officers = [
       {
         name: 'Jacqueline Woo',
-        tagline: 'where\'s the selfie stick',
+        tagline: 'Can i get a burley New Orleans w/ light ice to go?',
         title: 'President',
         photo: '/img/officers/jackie.jpg'
       },
       {
         name: 'Natasha Welingkar',
-        tagline: 'never not laughing',
+        tagline: 'just your average human bean',
         title: 'President',
         photo: '/img/officers/natasha.jpg'
       },
@@ -58,181 +35,150 @@ export default class Index extends React.Component {
         photo: '/img/officers/julia.jpg'
       },
       {
-        name: 'Alven Wang',
-        tagline: 'detail oriented team player who thinks outside the box',
-        title: 'Design Services',
-        tier: 'Gold Tier',
-        photo: '/img/officers/alven.jpg'
-      },
-      {
-        name: 'Natya Dharmosetio',
-        tagline: '✌︎ hehe',
-        title: 'Photo Services',
-        tier: 'Photo Tier',
-        photo: '/img/officers/natya.jpg'
-      },
-      {
-        name: 'Sonia Hung',
-        tagline: 'feed me kimchi and i\'ll love you <3 ',
-        title: 'External',
-        tier: 'Gold Tier',
-        photo: '/img/officers/sonia.jpg'
-      },
-      {
-        name: 'David Xie',
-        tagline: 'succ(ulent) boi',
-        title: 'External',
-        tier: 'Gold Tier',
-        photo: '/img/officers/davidx.jpg'
-      },
-      {
-        name: 'Roya Chagnon',
-        tagline: 'down with tech!',
-        title: 'VP of Marketing',
-        tier: 'Marketing Tier',
-        photo: '/img/officers/roya.jpg'
-      },
-      {
-        name: 'Catherine Zhou',
-        tagline: '!! ༼;´༎ຶ ۝ ༎ຶ༽',
-        title: 'VP of Marketing',
-        tier: 'Marketing Tier',
-        photo: '/img/officers/cassie.jpg'
-      },
-      {
-        name: 'Arlan Jaska',
-        tagline: '\"><script>alert(/xss/)</script>',
-        title: 'Finance',
-        tier: 'Web Tier',
-        photo: '/img/officers/arlan.jpg'
-      },
-      {
-        name: 'Brian Giang',
-        tagline: '*eye emoji*',
-        title: 'Admin',
-        tier: 'Gold Tier',
-        photo: '/img/officers/brian.jpg'
-      },
-      {
-        name: 'Peter Phan',
-        tagline: 'photo slave',
-        title: 'Recollections',
-        tier: 'Photo Tier',
-        photo: '/img/officers/peter.jpg'
-      },
-      {
-        name: 'Charley Huang',
-        tagline: 'More than you can afford, pal. Ferrari.',
-        title: 'Internal',
-        tier: 'Video Tier',
-        photo: '/img/officers/charley.jpg'
-      },
-      {
         name: 'Soph Li',
-        tagline: 'member of the 4am club',
-        title: 'Internal',
+        tagline: 'speak sophli and carry a big stick',
+        title: 'Photo Services',
         tier: 'Photo Tier',
         photo: '/img/officers/soph.jpg'
       },
       {
-        name: 'Grace Noh',
-        tagline: 'My wifi password is \"catsaregreat.\"',
-        title: 'Education Coordinator',
-        tier: 'Intro Decal',
-        photo: '/img/officers/grace.jpg'
-      },
-      {
         name: 'Yudi Sun',
-        tagline: 'shark baby',
-        title: 'Education Outreach',
-        tier: 'Gold Tier',
-        photo: '/img/officers/yudi.jpg'
-      },
-      {
-        name: 'Shota Pangilinan',
-        tagline: 'bad spiderman',
-        title: 'Advisor',
-        tier: 'Photo Tier',
-        photo: '/img/officers/shota.jpg'
-      },
-      {
-        name: 'Charisse Celestial',
-        tagline: 'ᕕ( ᐛ )ᕗ',
-        title: 'Advisor',
-        tier: 'Intro Decal',
-        photo: '/img/officers/charisse.jpg'
-      },
-      {
-        name: 'Jason Mai',
-        tagline: 'worst behavior',
-        title: 'Advisor',
-        tier: 'Graphic Design Principles and Photo Decals',
-        photo: '/img/officers/jason.jpg'
-      },
-      {
-        name: 'Brandon Chau',
-        tagline: 'photo senpai',
-        title: 'Advisor',
-        tier: 'Photo Decal',
-        photo: '/img/officers/brandon.jpg'
-      },
-      {
-        name: 'Tina Xu',
-        tagline: 'Generic asian girl (ʘ‿ʘ✿)',
-        title: 'Advisor',
+        tagline: 'shark babying',
+        title: 'External',
         tier: 'Blue Tier',
-        photo: '/img/officers/tina.jpg'
-      },
-      {
-        name: 'Davinci Lam',
-        tagline: 'rave god',
-        title: 'Facilitator',
-        tier: 'Photo Decal',
-        photo: '/img/officers/davinci.jpg'
-      },
-      {
-        name: 'Margaret Zhou',
-        tagline: 'margiemARgiemargaretmARgaret',
-        title: 'Facilitator',
-        tier: 'Intro Decal',
-        photo: '/img/officers/margie.jpg'
-      },
-      {
-        name: 'Pamela Hu',
-        tagline: 'Knock knock? Hu\'s there.',
-        title: 'Facilitator',
-        tier: 'Photo Decal',
-        photo: '/img/officers/pam.jpg'
-      },
-      {
-        name: 'Hongye Xu',
-        tagline: 'Pray for me, I\'m bout to hit the Ye button',
-        title: 'Advisor',
-        photo: '/img/officers/hongye.jpg'
-      },
-      {
-        name: 'Ben Marimon',
-        tagline: 'diversity hire',
-        title: 'Advisor',
-        photo: '/img/officers/ben.jpg'
-      },
-      {
-        name: 'Allan Peng',
-        tagline: 'imma bee imma bee imma bee',
-        title: 'Advisor',
-        photo: '/img/officers/allan.jpg'
-      },
-      {
-        name: 'Jordan Said',
-        tagline: 'Doing too much. Asha?',
-        title: 'Advisor',
-        photo: '/img/officers/jordan.jpg'
+        photo: '/img/officers/yudi.jpg'
       },
       {
         name: 'Lancy Zhang',
         tagline: 'happily and perpetually lost',
         title: 'Advisor',
+        tier: 'Blue Tier',
         photo: '/img/officers/lancy.jpg'
+      },
+      {
+        name: 'David Bui',
+        tagline: 'rain drop, drop top, the sketch file is in my dropbox',
+        title: 'External',
+        tier: 'Web Tier',
+        photo: '/img/officers/davidb.jpg'
+      },
+      {
+        name: 'David Xie',
+        tagline: 'YURI!!!onIce',
+        title: 'VP of Marketing',
+        tier: 'Marketing Tier',
+        photo: '/img/officers/davidx.jpg'
+      },
+      {
+        name: 'Arlan Jaska',
+        tagline: 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*',
+        title: 'Finance',
+        tier: 'Web Tier',
+        photo: '/img/officers/arlan.jpg'
+      },
+      {
+        name: 'Barbara Yang',
+        tagline: 'carbs, puppers, pretty colors',
+        title: 'Admin',
+        tier: 'Gold Tier',
+        photo: '/img/officers/barbara.jpg'
+      },
+      {
+        name: 'Charley Huang',
+        tagline: 'Love. That\'s what makes a Subaru a Subaru.',
+        title: 'Recollections',
+        tier: 'Video Tier',
+        photo: '/img/officers/charley.jpg'
+      },
+      {
+        name: 'Nicholas Chiu',
+        tagline: 'aka chiubacca',
+        title: 'Internal',
+        tier: 'Photo Tier',
+        photo: '/img/officers/nick.jpg'
+      },
+      {
+        name: 'Brian Giang',
+        tagline: 'new father of kitten of unknown gender',
+        title: 'Internal',
+        tier: 'Gold Tier',
+        photo: '/img/officers/brian.jpg'
+      },
+      {
+        name: 'Jessica Kwon',
+        tagline: 'i am a turtle i love u',
+        title: 'Education Coordinator',
+        tier: 'Intro Decal',
+        photo: '/img/officers/jessica.jpg'
+      },
+      {
+        name: 'Brandon Fang',
+        tagline: 'body piercing saved my life',
+        title: 'Education Outreach',
+        tier: 'Gold Tier',
+        photo: '/img/officers/brandon.jpg'
+      },
+      {
+        name: 'Anjile An',
+        tagline: 'will pen tool for food',
+        title: 'Facilitator',
+        tier: 'Intro Decal',
+        photo: '/img/officers/anjile.jpg'
+      },
+      {
+        name: 'Jeffrey Shi',
+        tagline: 'FULL COMMUNISM',
+        title: 'Facilitator and Design Services',
+        tier: 'Graphic Design Principles',
+        photo: '/img/officers/jeffrey.jpg'
+      },
+      {
+        name: 'Jackie Xu',
+        tagline: 'who cares about your feed\'s aesthetic',
+        title: 'Facilitator',
+        tier: 'Photo Decal',
+        photo: '/img/officers/jackiex.jpg'
+      },
+      {
+        name: 'Andrew Wang',
+        tagline: 'Follow me on insta @ndrewwang',
+        title: 'Facilitator',
+        tier: 'Photo Decal',
+        photo: '/img/officers/andrew.jpg'
+      },
+      {
+        name: 'Alven Wang',
+        tagline: 'i am a wang with a huuuuuuuuuge wang ;) muah kisses muah muah muah',
+        title: 'Advisor',
+        tier: 'Gold Tier',
+        photo: '/img/officers/alven.jpg'
+      },
+      {
+        name: 'Christine Le',
+        tagline: 'pizza and midday naps',
+        title: 'Facilitator',
+        tier: 'Intro Decal',
+        photo: '/img/officers/christine.jpg'
+      },
+      {
+        name: 'Margaret Zhou',
+        tagline: 'kiwikiwikiwi',
+        title: 'Facilitator',
+        tier: 'Intro Decal',
+        photo: '/img/officers/margie.jpg'
+      },
+      {
+        name: 'Ankur Maniar',
+        tagline: 'fashion baby FASHUN*~*~*~*~',
+        title: 'Facilitator',
+        tier: 'Photo Decal',
+        photo: '/img/officers/ankur.jpg'
+      },
+      {
+        name: 'Ben Marimon',
+        tagline: 'my favorite type of flowers is Brandon Flowers',
+        title: 'Advisor',
+        photo: '/img/officers/ben.jpg'
       }
     ];
 
@@ -267,31 +213,6 @@ export default class Index extends React.Component {
       );
     });
 
-    const marketingElements = _.map(marketing, (person, index) => {
-      return (
-        <div
-          key={ `personElem-${index}` }
-          className="marketing"
-        >
-          <div className="marketing__photo">
-            <img
-              src={ prefixLink(person.photo) }
-            />
-          </div>
-          <div className="marketing__overlay marketing__overlay--left"></div>
-          <div className="marketing__overlay marketing__overlay--right"></div>
-          <div className="marketing__details">
-            <div className="marketing__detail--name">
-              { person.name }
-            </div>
-            <div className="marketing__detail--tagline">
-              <i>{ person.tagline }</i>
-            </div>
-          </div>
-        </div>
-      );
-    });
-
     return (
       <DocumentTitle title="Innovative Design">
         <div>
@@ -301,12 +222,6 @@ export default class Index extends React.Component {
             </h1>
             <div className="officers">
               { officerElements }
-            </div>
-            <h1 className="section__title">
-              marketing
-            </h1>
-            <div className="marketing__wrapper">
-              { marketingElements }
             </div>
           </div>
         </div>

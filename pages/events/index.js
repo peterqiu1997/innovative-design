@@ -23,8 +23,8 @@ export default class Index extends React.Component {
             Come out to our decal infosession to learn more about the decals we offer!
           </p>
           <div className="button__wrapper">
-            <a href="https://www.facebook.com/events/672621399554589/" target="_blank">
-              <button className="info__button" disabled>coming soon</button>
+            <a href="https://www.facebook.com/events/1056910001104826/" target="_blank">
+              <button className="info__button">rsvp</button>
             </a>
           </div>
         </li>
@@ -36,8 +36,8 @@ export default class Index extends React.Component {
             Innovative Design and each of the different tiers.
           </p>
           <div className="button__wrapper">
-            <a href="https://www.facebook.com/events/536608159860227/" target="_blank">
-              <button className="info__button" disabled>coming soon</button>
+            <a href="https://www.facebook.com/events/408412902844165/" target="_blank">
+              <button className="info__button">rsvp</button>
             </a>
           </div>
         </li>

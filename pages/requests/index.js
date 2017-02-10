@@ -76,7 +76,7 @@ export default class Index extends React.Component {
           })
         }
       >
-        <button id="form__submit" type="submit" disabled>
+        <button id="form__submit" type="submit">
           submit
         </button>
       </div>
@@ -357,7 +357,6 @@ export default class Index extends React.Component {
                     color: 'red'
                   }}
                 >
-                  <b>Requests are closed until the start of the semester.  Please check back!</b>.
                 </p>
               </div>
               <div className="request__form">

@@ -70,6 +70,13 @@ export default class Index extends React.Component {
         photo: '/img/officers/davidx.jpg'
       },
       {
+        name: 'Tina Xu',
+        tagline: '100% verified tea girl',
+        title: 'VP of Marketing',
+        tier: 'Marketing Tier',
+        photo: '/img/officers/tina.jpg'
+      },
+      {
         name: 'Arlan Jaska',
         tagline: 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*',
         title: 'Finance',
@@ -127,10 +134,17 @@ export default class Index extends React.Component {
       },
       {
         name: 'Jeffrey Shi',
-        tagline: 'FULL COMMUNISM',
+        tagline: 'FULLY AUTOMATED GOURMET LUXURY QUEER GREEN SPACE COMMUNISM',
         title: 'Facilitator and Design Services',
         tier: 'Graphic Design Principles',
         photo: '/img/officers/jeffrey.jpg'
+      },
+      {
+        name: 'Khor Le Yi',
+        tagline: 'you can khor me le yi',
+        title: 'Facilitator',
+        tier: 'Graphic Design Principles',
+        photo: '/img/officers/khor.jpg'
       },
       {
         name: 'Jackie Xu',

@@ -49,8 +49,8 @@ export default class Index extends React.Component {
             and open to all Cal students.  Check out workshops from last semester in the event website below!
           </p>
           <div className="button__wrapper">
-            <a href="https://www.facebook.com/events/1577024075937933/">
-              <button className="info__button" disabled>coming soon</button>
+            <a href="https://www.facebook.com/events/970127336422355/" target="_blank">
+              <button className="info__button">rsvp</button>
             </a>
             <a href="http://hex.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>
@@ -98,7 +98,7 @@ export default class Index extends React.Component {
           <div className="page__wrapper events">
             <h1 className="section__title">upcoming events</h1>
             <div className="info">
-              Here is the timeline for our public events this semester.  "Coming Soon" means the Facebook event has not yet been made for the event.  
+              Here is the timeline for our public events this semester.  "Coming Soon" means the Facebook event has not yet been made for the event.
               You can check back here or like our Facebook page for updates.
             </div>
             { timeline }

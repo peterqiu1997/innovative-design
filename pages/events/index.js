@@ -57,16 +57,16 @@ export default class Index extends React.Component {
             </a>
           </div>
         </li>
-        <li className="event" data-date="March 11, 2017">
+        <li className="event" data-date="March 12, 2017">
           <h3>RGB: Reach, Grow, Build</h3>
-          <h4 className="hidden__date">March 11, 2017</h4>
+          <h4 className="hidden__date">March 12, 2017</h4>
           <p>
             Join Innovative Design for a day of learning from industry designers through a series of talks, workshops, and open
             Q&A.  This event occurs <b>annually in the spring</b>.  See last year's event website for more information!
           </p>
           <div className="button__wrapper">
-            <a href="">
-              <button className="info__button" disabled>coming soon</button>
+            <a href="https://www.facebook.com/events/1830962990496969/">
+              <button className="info__button">rsvp</button>
             </a>
             <a href="http://rgb.innovativedesign.club" target="_blank">
               <button className="info__button">event website</button>

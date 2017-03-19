@@ -20,8 +20,6 @@ const campusTypes = [
 
 const projectTypes = [
   'Graphic Design',
-  'Web Design',
-  'Videography',
   'Photography'
 ];
 
@@ -351,7 +349,7 @@ export default class Index extends React.Component {
                   display: this.state.sent && !this.state.sentError ? "none" : "block"
                 }}
               >
-                Please submit design requests through the form below.
+                <b>VIDEO and WEB requests are closed for the semester.</b>
                 <p
                   style={{
                     color: 'red'

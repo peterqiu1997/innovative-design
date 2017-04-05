@@ -61,6 +61,7 @@ export default class Index extends React.Component {
         number: 'Lesson 8',
         title: 'Blending, Layer Styles and Filter Effects',
         img: '/img/decal/lesson8.png',
+        url: '/decal/lesson-8/'
       },
       {
         number: 'Lesson 9',

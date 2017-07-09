@@ -75,7 +75,7 @@ export default class Index extends React.Component {
           })
         }
       >
-        <button id="form__submit" type="submit" disabled>
+        <button id="form__submit" type="submit">
           submit
         </button>
       </div>
@@ -158,7 +158,7 @@ export default class Index extends React.Component {
             name="deadline" {...dateProps}
             placeholderText="deadline" id="deadline"
             minDate={moment().add(14, 'days')}
-            maxDate={moment('2017-05-01')}
+            maxDate={moment('2017-12-18')}
           />
         </div>
         <div className="input__container">
@@ -240,16 +240,16 @@ export default class Index extends React.Component {
     e.preventDefault();
 
     const jsonPayload = {
-      name: this.refs.name.value,
-      email: this.refs.email.value,
-      phone: this.state.enteredPhone,
-      organization: this.refs.organization.value,
-      description: this.refs.description.value,
-      campus: this.state.selectedCampusType,
-      type: this.state.selectedProjectType,
-      deadline: this.state.selectedDate.format("MM/DD/YYYY"),
-      project: this.refs.project.value,
-      questions: this.refs.questions.value
+      Name: this.refs.name.value,
+      Email: this.refs.email.value,
+      Phone: this.state.enteredPhone,
+      Organization: this.refs.organization.value,
+      OrgDescription: this.refs.description.value,
+      Campus: this.state.selectedCampusType,
+      Type: this.state.selectedProjectType,
+      Deadline: this.state.selectedDate.format("MM/DD/YYYY"),
+      ProjectDescription: this.refs.project.value,
+      Additional: this.refs.questions.value
     };
 
     if (!submissionIsValid(jsonPayload)) {
@@ -262,16 +262,15 @@ export default class Index extends React.Component {
     });
 
     request
-      .post('http://sheets.innovativedesign.club/request')
+      .post('https://warm-lowlands-41134.herokuapp.com')
       .send(jsonPayload)
-      .set('X-Api-Version', 'kitty/v1')
       .end((err, res) => {
         if (err) {
           this._handleSubmissionError(err);
         } else {
           this._handleSubmissionSuccess();
         }
-      });
+    });
   }
 
   _handleSubmissionError(error) {
@@ -350,8 +349,6 @@ export default class Index extends React.Component {
                   display: this.state.sent && !this.state.sentError ? "none" : "block"
                 }}
               >
-                <b>ALL requests are closed for the semester!  Thank you for your interest in our services.  Please check back
-                next semester!</b>
                 <p
                   style={{
                     color: 'red'

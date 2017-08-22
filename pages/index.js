@@ -510,10 +510,6 @@ export default class Index extends React.Component {
                     className="icon web"
                     style={{ backgroundImage: `url("${prefixLink('/img/tiers/web.png')}")` }}
                   ></div>
-                  <div
-                    className="icon video"
-                    style={{ backgroundImage: `url("${prefixLink('/img/tiers/video.png')}")` }}
-                  ></div>
                 </div>
                 <div className="info__container--icons">
                   <p>

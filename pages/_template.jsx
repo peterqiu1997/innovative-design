@@ -80,8 +80,8 @@ export default class Navigation extends React.Component {
                   />
                 </a>
               </div>
-              <a className="nav__item nav__link" href={ prefixLink('/team/') }>
-                team
+              <a className="nav__item nav__link" href={ prefixLink('/about/') }>
+                about
               </a>
               <a className="nav__item nav__link" href={ prefixLink('/events/') }>
                 events

@@ -347,7 +347,6 @@ export default class Index extends React.Component {
       'Graphic Design',
       'Photography',
       'Web Design',
-      'Videography',
       'Design'
     ];
 
@@ -473,8 +472,8 @@ export default class Index extends React.Component {
                   ></div>
                 </div>
                 <div className="info__container--circles">
-                  Innovative Design is a family of graphic and web designers, photographers,
-                  and videographers at the University of California, Berkeley. We are creative
+                  Innovative Design is a family of graphic designers, web designers, and photographers 
+                  at the University of California, Berkeley. We are creative
                   individuals who are continuously evolving by collaborating, inspiring and
                   educating one another.
                 </div>
@@ -518,7 +517,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="info__container--icons">
                   <p>
-                    Innovative Design has five tiers that students can apply to be a member on: Blue, Gold, Photo, Video, and Web.
+                    Innovative Design has four tiers that students can apply to be a member on: Blue, Gold, Photo, and Web.
                   </p>
                   <p>
                     There are two design tiers, Gold and Blue Tier.  <b>Blue Tier</b> is a group of intermediate to advanced designers
@@ -531,10 +530,6 @@ export default class Index extends React.Component {
                   <p>
                     <b>Web Tier</b> works for clients that are in need of technical help in designing their websites.
                     Tier members learn new skills and put existing knowledge to use through hands-on experience.
-                  </p>
-                  <p>
-                    <b>Video Tier</b> creates video campaigns for clients on and off campus -- everything from logo animations,
-                    event recap videos and Kickstarter campaigns.
                   </p>
                   <p>
                     Visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.

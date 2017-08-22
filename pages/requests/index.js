@@ -87,6 +87,7 @@ export default class Index extends React.Component {
 
     return (
       <form id="request-form" onSubmit={this._handleSubmit}>
+        <span> Graphic design requests are open for the <b>Fall 2017</b> semester. A team lead will reach out to you starting September, and graphic design requests will typically take up to a month to complete. </span>
         <div className="input__container input__container--half">
           <input
             ref="name"

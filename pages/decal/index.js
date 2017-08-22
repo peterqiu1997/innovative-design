@@ -81,7 +81,7 @@ export default class Index extends React.Component {
       }
     ];
 
-    const lessonElements = _.map(lessons, (lesson, index) => {
+    const lessonElements = ""/*_.map(lessons, (lesson, index) => {
       return (
         <div
           key={ `lessonElem-${index}` }
@@ -109,7 +109,7 @@ export default class Index extends React.Component {
           </a>
         </div>
       );
-    });
+    });*/
 
     return (
       <DocumentTitle title="Innovative Design">
@@ -117,7 +117,7 @@ export default class Index extends React.Component {
           <div className="page__wrapper decal">
             <h1 className="section__title">intro to photoshop and illustrator decal</h1>
             <div className="description">
-              A 2-unit DeCal for beginner to intermediate level designers, open to all interested Berkeley students.
+              A 2-unit DeCal for beginner to intermediate level designers, open to all interested Berkeley students. Lessons will be released when the decal begins.
             </div>
             <div className="lessons__wrapper">
               { lessonElements }

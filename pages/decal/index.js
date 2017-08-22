@@ -81,7 +81,8 @@ export default class Index extends React.Component {
       }
     ];
 
-    const lessonElements = ""/*_.map(lessons, (lesson, index) => {
+    // remove lesson link lesson.url ? prefixLink(lesson.url) : '' 
+    const lessonElements = _.map(lessons, (lesson, index) => {
       return (
         <div
           key={ `lessonElem-${index}` }
@@ -89,7 +90,7 @@ export default class Index extends React.Component {
         >
           <a
             className="lesson__link"
-            href={ lesson.url ? prefixLink(lesson.url) : '' }
+            href={''}
           >
             <div
               className="lesson__photo"
@@ -109,7 +110,7 @@ export default class Index extends React.Component {
           </a>
         </div>
       );
-    });*/
+    });
 
     return (
       <DocumentTitle title="Innovative Design">

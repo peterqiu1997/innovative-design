@@ -20,7 +20,6 @@ export default class MasonryContainer extends Component {
   }
 
   generate(key, path)  {
-    console.log("called");
     return (
       <div key={key} className="grid-item"><div className="img__container"><img src={path} /></div></div>
     );
@@ -35,6 +34,7 @@ export default class MasonryContainer extends Component {
       divs.push(this.generate(i, "/img/portfolio/img" + i + ".png"))
     }
 
+    // extra setState because formatting issues initially
     this.setState({
       divs: divs,
       count: 10

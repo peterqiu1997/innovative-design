@@ -130,7 +130,7 @@ In this class, students will be introduced to the history, art, and practices of
             </div>
             <h1 className="section__title">graphic design principles decal</h1>
             <div className="description">
-              This DeCal is designed for students who are technically pro cient and are looking to learn design principles in order to apply their technical skills to projects. This DeCal is not meant to give you all the tools and knowledge to become a professional designer. However, we will provide an essential foundation to start your career in design.
+              This DeCal is designed for students who are technically proficient and are looking to learn design principles in order to apply their technical skills to projects. This DeCal is not meant to give you all the tools and knowledge to become a professional designer. However, we will provide an essential foundation to start your career in design.
             </div>
           </div>
         </div>

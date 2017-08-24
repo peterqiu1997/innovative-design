@@ -254,22 +254,19 @@ export default class Index extends React.Component {
             </div>
             <div className="info__container--icons">
               <p>
-                Innovative Design has four tiers that students can apply to be a member on: Blue, Gold, Photo, and Web.
+                Innovative Design has four teams that students can apply to be a member on: Blue, Gold, Photo, and Web.
               </p>
               <p>
-                There are two design tiers, Gold and Blue Tier.  <b>Blue Tier</b> is a group of intermediate to advanced designers
-                that offers design services to off-campus groups while <b>Gold Tier</b> offers graphic design education
+                There are two design teams, Gold and Blue Team.  <b>Blue Team</b> is a group of intermediate to advanced designers
+                that offers design services to off-campus groups while <b>Gold Team</b> offers graphic design education
                 and experience for beginner to intermediate designers to on-campus groups.
               </p>
               <p>
-                <b>Photo Tier</b> is a hands-on experience in shooting professional headshots, event photography, stock photos and more.
+                <b>Photo Team</b> is a hands-on experience in shooting professional headshots, event photography, stock photos and more.
               </p>
               <p>
-                <b>Web Tier</b> works for clients that are in need of technical help in designing their websites.
-                Tier members learn new skills and put existing knowledge to use through hands-on experience.
-              </p>
-              <p>
-                Visit <b><a href="http://makeberkeleybeautiful.com" target="_blank">makeberkeleybeautiful.com</a></b> for a full portfolio.
+                <b>Web Team</b> works for clients that are in need of technical help in designing their websites.
+                Team members learn new skills and put existing knowledge to use through hands-on experience.
               </p>
             </div>
             <h1 className="section__title">

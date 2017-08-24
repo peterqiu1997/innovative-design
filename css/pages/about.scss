@@ -4,6 +4,47 @@
   max-width: $global-max-width;
   margin: 0 auto;
 
+  .icons__container {
+    max-width: $global-max-width;
+    text-align: center;
+    padding: 0 12px;
+
+    .icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 0px 20px;
+      background-position: center center;
+      background-size: cover;
+
+      @media (max-width: 728px) {
+        margin: 6px 20px;
+      }
+
+      @media (max-width: 400px) {
+        width: 50px;
+        height: 50px;
+        padding-bottom: 48px;
+      }
+    }
+  }
+
+  .info__container--icons {
+    max-width: 900px;
+    padding: 0 24px;
+    margin: 48px auto;
+    font-size: 18px;
+    font-family: 'Raleway';
+
+    b {
+      color: $blue;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
   .officers {
     padding: 0 2%;
 

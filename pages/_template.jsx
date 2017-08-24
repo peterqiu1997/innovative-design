@@ -87,7 +87,7 @@ export default class Navigation extends React.Component {
                 events
               </a>
               <a className="nav__item nav__link" href={ prefixLink('/decal/') }>
-                decal students
+                decals
               </a>
             </div>
           </div>

@@ -118,10 +118,19 @@ export default class Index extends React.Component {
           <div className="page__wrapper decal">
             <h1 className="section__title">intro to photoshop and illustrator decal</h1>
             <div className="description">
-              A 2-unit DeCal for beginner to intermediate level designers, open to all interested Berkeley students. Lessons will be released when the decal begins.
+              This course teaches graphic design through the use of Photoshop and Illustrator. Adobe Photoshop and Illustrator CC will be taught in a series of tutorials complemented with exercises to perform during class and at home. These exercises give students the opportunity to practice the tools, create designs, and exercise their creativity. We
+will also explore graphic design trends and their applications, and learn to receive and give critiques in order to improve your design work. We hope to make this a fun and rewarding class. Lesson previews for this decal are below, and they will be released when the decal begins.
             </div>
             <div className="lessons__wrapper">
               { lessonElements }
+            </div>
+            <h1 className="section__title">photo decal</h1>
+            <div className="description">
+In this class, students will be introduced to the history, art, and practices of photography in the modern world. Students will learn how to manually operate a digital SLR camera, how to use lighting in conjuntion with posing to create compositions, and how to post-process RAW photos. Di erent disciplines will also be taught and include portraiture, landscape, architecture, product, studio and more. Over the semester, students will learn critiques of photos and develop a more artistic eye for photos.
+            </div>
+            <h1 className="section__title">graphic design principles decal</h1>
+            <div className="description">
+              This DeCal is designed for students who are technically pro cient and are looking to learn design principles in order to apply their technical skills to projects. This DeCal is not meant to give you all the tools and knowledge to become a professional designer. However, we will provide an essential foundation to start your career in design.
             </div>
           </div>
         </div>

@@ -2,9 +2,12 @@
   margin: 0 auto;
 
   .description {
-    margin: 32px 0;
+    margin: 0 auto;
+    margin-bottom: 32px;
     font-family: 'Raleway';
     text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
     padding: 0 2%;
   }
 

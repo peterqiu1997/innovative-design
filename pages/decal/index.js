@@ -126,7 +126,7 @@ will also explore graphic design trends and their applications, and learn to rec
             </div>
             <h1 className="section__title">photo decal</h1>
             <div className="description">
-In this class, students will be introduced to the history, art, and practices of photography in the modern world. Students will learn how to manually operate a digital SLR camera, how to use lighting in conjuntion with posing to create compositions, and how to post-process RAW photos. Di erent disciplines will also be taught and include portraiture, landscape, architecture, product, studio and more. Over the semester, students will learn critiques of photos and develop a more artistic eye for photos.
+In this class, students will be introduced to the history, art, and practices of photography in the modern world. Students will learn how to manually operate a digital SLR camera, how to use lighting in conjunction with posing to create compositions, and how to post-process RAW photos. Di erent disciplines will also be taught and include portraiture, landscape, architecture, product, studio and more. Over the semester, students will learn critiques of photos and develop a more artistic eye for photos.
             </div>
             <h1 className="section__title">graphic design principles decal</h1>
             <div className="description">

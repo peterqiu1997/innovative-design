@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import { Link } from 'react-router';
 import classNames from 'classnames';
+import $ from 'jquery';
 
 const bottomOffset = 100;
 
@@ -29,18 +30,19 @@ export default class MasonryContainer extends Component {
     window.addEventListener("scroll", this._handleScroll);
 
     const divs = []
-
-    for (let i = 1; i < 11; i += 1) {
-      divs.push(this.generate(i, "/img/portfolio/img" + i + ".png"))
+    divs.push(this.generate(1, "/img/portfolio/logos_innod-" + 13 + ".png"))
+    divs.push(this.generate(2, "/img/portfolio/logos_innod-" + 14 + ".png"))
+    for (let i = 1; i <= 6; i += 1) {
+      divs.push(this.generate(2 + i, "/img/portfolio/logos_innod-" + i + ".jpg"))
     }
 
-    // extra setState because formatting issues initially
+    // extra setState because of formatting issues initially
     this.setState({
       divs: divs,
-      count: 10
+      count: 8
     }, () => {
       this.setState({
-        divs: this.state.divs.concat(this.generate(11, "/img/portfolio/img" + 11 + ".png")),
+        divs: this.state.divs.concat(this.generate(9, "/img/portfolio/logos_innod-" + 9 + ".jpg")),
         count: this.state.count + 1
       });
     });
@@ -57,8 +59,8 @@ export default class MasonryContainer extends Component {
       var height = d.offsetHeight;
       var scrolly = window.scrollY;
       if (scrolly >= height - offset - bottomOffset) {
-        for (let i = 1; i < 4; i += 1) {
-          let path = "/img/portfolio/img" + i + ".png";
+        for (let i = this.state.count; i <= 12; i += 1) {
+          let path = "/img/portfolio/logos_innod-" + i + ".jpg";
           this.setState({
             divs: this.state.divs.concat([<div key={this.state.count + 1} className="grid-item"><img src={path} /></div>]),
             count: this.state.count + 1
@@ -79,6 +81,13 @@ export default class MasonryContainer extends Component {
         <div className="masonry--container">
             <Masonry options={options} updateOnEachImageLoad={true}>
                 <div className="grid-sizer"></div>
+                <div className="grid-item hero">
+                  <div className="img__container">
+                    <a href="https://www.facebook.com/pg/InnovativeDesignUCB/events/">
+                      <img src="/img/portfolio/hero.png"/>
+                    </a>
+                  </div>
+                </div>
                 <div className="grid-item intro">
                     <span>Innovative Design</span> is a family of graphic designers, web designers, and photographers at the University of California, Berkeley. 
                     <br />
@@ -88,7 +97,9 @@ export default class MasonryContainer extends Component {
                     <br />
                     Scroll down to view our work. 
                 </div>
-                {this.state.divs}
+                <div className="content__container">
+                  {this.state.divs}
+                </div>
             </Masonry>
         </div>
     )

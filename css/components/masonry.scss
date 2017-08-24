@@ -1,8 +1,12 @@
 .masonry--container {
-  width: calc(100% - 40px);  
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;  
   font-weight: 300;
+
+  .content__container {
+    width: calc(100% - 40px);  
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   
   .grid {
     background: #CCC;
@@ -54,5 +58,11 @@
     @media (max-width: 500px) {
       width: 100%;
     }
+  }
+
+  /* ---- hero grid-item ---- */
+  .hero {
+    width: 100%;
+    padding: 0;
   }
 }

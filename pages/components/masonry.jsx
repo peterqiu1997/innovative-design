@@ -73,7 +73,7 @@ const imgOrder = [
   },
   {
     path: "/img/portfolio/logos_innod-17.jpg",
-    description: "Photo for Photo Team"
+    description: "Portraits for Cal Hawaii Club"
   }
 ]
 

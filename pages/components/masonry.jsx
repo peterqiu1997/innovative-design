@@ -2,9 +2,80 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import { Link } from 'react-router';
 import classNames from 'classnames';
-import $ from 'jquery';
+import { prefixLink } from 'gatsby-helpers';
 
-const bottomOffset = 100;
+const bottomOffset = 70;
+
+const imgOrder = [
+  {
+    path: "/img/portfolio/logos_innod-1.jpg",
+    description: "Logo and Branding for Uproot"
+  },
+  {
+    path: "/img/portfolio/logos_innod-2.jpg",
+    description: "Illustrations for Cal Day"
+  },
+  {
+    path: "/img/portfolio/logos_innod-3.jpg",
+    description: "Logo Project for Cal Coptics"
+  },
+  {
+    path: "/img/portfolio/logos_innod-15.jpg",
+    description: "UC Berkeley Holi Festival"
+  },
+  {
+    path: "/img/portfolio/logos_innod-4.jpg",
+    description: "Organizing RGB 2017 Speaker Series"
+  },
+  {
+    path: "/img/portfolio/logos_innod-13.png",
+    description: "Website for Art History Department"
+  },
+  {
+    path: "/img/portfolio/logos_innod-5.jpg",
+    description: "Logo for ASUC Office of the CTO"
+  },
+  {
+    path: "/img/portfolio/logos_innod-6.jpg",
+    description: "Logo Project for Berkeley Basic Needs"
+  },
+  {
+    path: "/img/portfolio/logos_innod-7.jpg",
+    description: "T-shirt Design for Barbell Club at Berkeley"
+  },
+  {
+    path: "/img/portfolio/logos_innod-8.jpg",
+    description: "Logo for Student Yoga Collective"
+  },
+  {
+    path: "/img/portfolio/logos_innod-16.jpg",
+    description: "UC Berkeley Holi Festival"
+  },
+  {
+    path: "/img/portfolio/logos_innod-14.png",
+    description: "Website for Berkeley Association for India's Development"
+  },
+  {
+    path: "/img/portfolio/logos_innod-9.jpg",
+    description: "Halloween Cards 2016"
+  },
+  {
+    path: "/img/portfolio/logos_innod-10.jpg",
+    description: "Logo for Berkeley Starcraft"
+  },
+  {
+    path: "/img/portfolio/logos_innod-11.jpg",
+    description: "Logo for Kylin Law"
+  },
+  {
+    path: "/img/portfolio/logos_innod-12.jpg",
+    description: "Promo Materials for Cal Quidditch"
+  },
+  {
+    path: "/img/portfolio/logos_innod-17.jpg",
+    description: "Photo for Photo Team"
+  }
+]
 
 export default class MasonryContainer extends Component {
   constructor(props) {
@@ -20,9 +91,15 @@ export default class MasonryContainer extends Component {
     this.generate = this.generate.bind(this);
   }
 
-  generate(key, path)  {
+  generate(key, path, description)  {
     return (
-      <div key={key} className="grid-item"><div className="img__container"><img src={path} /></div></div>
+      <div key={key} className="grid-item">
+        <div className="img__container">
+          <img src={path} />
+          <div className="img__overlay"/>
+          <div className="img__text"> <span>{description}</span> </div>
+        </div>
+      </div>
     );
   };
 
@@ -30,19 +107,18 @@ export default class MasonryContainer extends Component {
     window.addEventListener("scroll", this._handleScroll);
 
     const divs = []
-    divs.push(this.generate(1, "/img/portfolio/logos_innod-" + 13 + ".png"))
-    divs.push(this.generate(2, "/img/portfolio/logos_innod-" + 14 + ".png"))
-    for (let i = 1; i <= 6; i += 1) {
-      divs.push(this.generate(2 + i, "/img/portfolio/logos_innod-" + i + ".jpg"))
+
+    for (let i = 0; i < 6; i += 1) {
+      divs.push(this.generate(i, imgOrder[i].path, imgOrder[i].description))
     }
 
     // extra setState because of formatting issues initially
     this.setState({
       divs: divs,
-      count: 8
+      count: 6
     }, () => {
       this.setState({
-        divs: this.state.divs.concat(this.generate(9, "/img/portfolio/logos_innod-" + 9 + ".jpg")),
+        divs: this.state.divs.concat(this.generate(6, imgOrder[this.state.count].path, imgOrder[this.state.count].description)),
         count: this.state.count + 1
       });
     });
@@ -53,18 +129,26 @@ export default class MasonryContainer extends Component {
   }
 
   _handleScroll(e) {
-    if (this.state.count < 30) {
+    if (this.state.count < 17) {
       var d = document.documentElement;
       var offset = d.scrollTop + window.innerHeight;
       var height = d.offsetHeight;
       var scrolly = window.scrollY;
-      if (scrolly >= height - offset - bottomOffset) {
-        for (let i = this.state.count; i <= 12; i += 1) {
-          let path = "/img/portfolio/logos_innod-" + i + ".jpg";
-          this.setState({
-            divs: this.state.divs.concat([<div key={this.state.count + 1} className="grid-item"><img src={path} /></div>]),
-            count: this.state.count + 1
-          });
+      if (scrolly >= height - offset) {
+        for (let i = 0; i < 4; i += 1) {
+          if (this.state.count < 17) {
+            this.setState({
+              divs: this.state.divs.concat([
+                <div key={this.state.count} className="grid-item">
+                  <div className="img__container">
+                    <img src={imgOrder[this.state.count].path} />
+                    <div className="img__overlay"/>
+                    <div className="img__text"> <span>{imgOrder[this.state.count].description}</span> </div>
+                  </div>
+                </div>]),
+              count: this.state.count + 1
+            });
+          }
         }
       }
     }
@@ -90,12 +174,13 @@ export default class MasonryContainer extends Component {
                 </div>
                 <div className="grid-item intro">
                     <span>Innovative Design</span> is a family of graphic designers, web designers, and photographers at the University of California, Berkeley. 
-                    <br />
-                    <br />
                     We are creative individuals who are continuously evolving by collaborating, inspiring and educating one another.
                     <br />
                     <br />
-                    Scroll down to view our work. 
+                    For design requests, <a href={ prefixLink('/requests/') }>click here.</a>
+                    <br />
+                    <br />
+                    Scroll down to view a selection of our work. 
                 </div>
                 <div className="content__container">
                   {this.state.divs}

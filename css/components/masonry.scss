@@ -7,6 +7,51 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+
+  .img__container {
+    position: relative;
+
+    .img__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      background: white;
+      transition: height 250ms;
+    }
+
+    .img__text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      color: #90A4AE;
+      opacity: 0;
+      height: 45px;
+      transition: opacity 250ms;
+      display: table;
+
+      span { display: table-cell; vertical-align: middle; }
+    }
+
+    &:hover {
+      .img__overlay {
+        height: 45px;
+      }
+      .img__text {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #0693C0;
+  }
   
   .grid {
     background: #CCC;
@@ -45,7 +90,10 @@
   /* ---- introductory grid-item ---- */
   .intro {
     width: 66.666%;
-    padding: 25px;
+    padding-top: 25px;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-bottom: 65px;
     font-size: 25px;
     color: #90A4AE;
     background-color: white;

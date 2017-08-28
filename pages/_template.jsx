@@ -6,6 +6,7 @@ import FontAwesome from 'react-fontawesome';
 import Headroom from 'react-headroom';
 import classNames from 'classnames';
 import $ from 'jquery';
+import DocumentTitle from 'react-document-title'
 
 import 'css/_index.scss';
 
@@ -30,6 +31,7 @@ export default class Navigation extends React.Component {
 
   render() {
     return (
+      <DocumentTitle title='Innovative Design'>
       <div className="root">
         <Headroom
           wrapperStyle={{
@@ -96,6 +98,7 @@ export default class Navigation extends React.Component {
           { this.props.children }
         </div>
       </div>
+    </DocumentTitle>
     )
   }
 }

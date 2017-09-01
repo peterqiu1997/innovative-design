@@ -106,7 +106,7 @@ export default class Index extends React.Component {
       },
       {
         name: 'Soph Li',
-        tagline: 'fruit-eating, flower-smelling, forest-loving, feet-swinging lil nugget',
+        tagline: 'gazer of stars, chaser of sunlight, picker of blackberries',
         title: 'Internal',
         tier: '',
         photo: '/img/officers/Soph.jpg'

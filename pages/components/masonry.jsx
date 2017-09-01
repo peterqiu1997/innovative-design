@@ -28,7 +28,7 @@ const imgOrder = [
     description: "Organizing RGB 2017 Speaker Series"
   },
   {
-    path: "/img/portfolio/logos_innod-13.png",
+    path: "/img/portfolio/logos_innod-13.jpg",
     description: "Website for Art History Department"
   },
   {
@@ -52,7 +52,7 @@ const imgOrder = [
     description: "UC Berkeley Holi Festival"
   },
   {
-    path: "/img/portfolio/logos_innod-14.png",
+    path: "/img/portfolio/logos_innod-14.jpg",
     description: "Website for Berkeley Association for India's Development"
   },
   {

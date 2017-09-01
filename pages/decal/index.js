@@ -116,6 +116,11 @@ export default class Index extends React.Component {
       <DocumentTitle title="Innovative Design">
         <div>
           <div className="page__wrapper decal">
+            <div className="button__wrapper">
+              <a href="http://apply.innovativedesign.club" target="_blank">
+                <button className="info__button">apply</button>
+              </a>
+            </div>
             <h1 className="section__title">intro to photoshop and illustrator decal</h1>
             <div className="description">
               This course teaches graphic design through the use of Photoshop and Illustrator. Adobe Photoshop and Illustrator CC will be taught in a series of tutorials complemented with exercises to perform during class and at home. These exercises give students the opportunity to practice the tools, create designs, and exercise their creativity. We

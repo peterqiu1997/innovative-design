@@ -2,7 +2,55 @@
   margin: 0 auto;
   
   .section__title { margin: 32px auto; }
+  .button__wrapper {
+    text-align:  center;
+    a { display: inline-block; margin-top: 25px;}
+    .info__button {
+      margin-right: 15px;
+      margin: 0 auto; 
+      padding: 0.75rem 0.9rem;
+      font-size: 1rem;
+      line-height: 1;
+      background: none;
+      border: 2px solid $blue;
+      border-radius: 4px;
+      overflow: hidden;
+      color: $blue;
+      transition: color 0.2s ease-in;
+      outline: none;
+      user-select: none;
+      text-transform: uppercase;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
 
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 105%;
+        height: 105%;
+        z-index: -1;
+        background: $blue;
+        transition: top 0.25s;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $white;
+
+        &::after {
+          top: 0;
+        }
+      }
+
+      @media (max-width: 500px) {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 15px;
+      }
+    }
+  }
   .description {
     margin: 0 auto;
     margin-bottom: 48px;

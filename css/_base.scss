@@ -60,4 +60,14 @@
       font-size: 1.5rem;
     }
   }
+
+  &.apply {
+    .section__title {
+      color: #90a4ae;
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
 }

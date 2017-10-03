@@ -167,7 +167,7 @@ export default class MasonryContainer extends Component {
                 <div className="grid-sizer"></div>
                 <div className="grid-item hero">
                   <div className="img__container">
-                    <a href="https://www.facebook.com/pg/InnovativeDesignUCB/events/">
+                    <a href="http://apply.innovativedesign.club">
                       <img src="/img/portfolio/hero.png"/>
                     </a>
                   </div>

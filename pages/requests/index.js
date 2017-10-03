@@ -20,8 +20,8 @@ const campusTypes = [
 
 const projectTypes = [
   'Graphic Design',
-  'Photography',
-  'Web Design'
+  'Photography'
+  // 'Web Design'
 ];
 
 function submissionIsValid(properties) {
@@ -87,7 +87,7 @@ export default class Index extends React.Component {
 
     return (
       <form id="request-form" onSubmit={this._handleSubmit}>
-        <span> Graphic design requests are open for the <b>Fall 2017</b> semester. A team lead will reach out to you starting September, and graphic design requests will typically take up to a month to complete. </span>
+        <span> Web design requests have closed for the <b>Fall 2017</b> semester. Graphic design and photography requests are still open. A team lead will reach out to you starting September, and requests will typically take up to a month to complete. </span>
         <div className="input__container input__container--half">
           <input
             ref="name"

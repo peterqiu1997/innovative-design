@@ -6,7 +6,7 @@ import FontAwesome from 'react-fontawesome';
 import Headroom from 'react-headroom';
 import classNames from 'classnames';
 import $ from 'jquery';
-import DocumentTitle from 'react-document-title'
+import DocumentTitle from 'react-document-title';
 
 import 'css/_index.scss';
 

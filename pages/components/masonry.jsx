@@ -167,7 +167,7 @@ export default class MasonryContainer extends Component {
                 <div className="grid-sizer"></div>
                 <div className="grid-item hero">
                   <div className="img__container">
-                    <a href="http://apply.innovativedesign.club">
+                    <a href="http://hex.innovativedesign.club">
                       <img src="/img/portfolio/hero.png"/>
                     </a>
                   </div>
@@ -175,9 +175,6 @@ export default class MasonryContainer extends Component {
                 <div className="grid-item intro">
                     <span>Innovative Design</span> is a family of graphic designers, web designers, and photographers at the University of California, Berkeley. 
                     We are creative individuals who are continuously evolving by collaborating, inspiring and educating one another.
-                    <br />
-                    <br />
-                    For design requests, <a href={ prefixLink('/requests/') }>click here.</a>
                     <br />
                     <br />
                     Scroll down to view a selection of our work. 

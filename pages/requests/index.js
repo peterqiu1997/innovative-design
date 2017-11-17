@@ -87,7 +87,7 @@ export default class Index extends React.Component {
 
     return (
       <form id="request-form" onSubmit={this._handleSubmit}>
-        <span> Web design requests have closed for the <b>Fall 2017</b> semester. Graphic design and photography requests are still open. A team lead will reach out to you starting September, and requests will typically take up to a month to complete. </span>
+        <span> Requests have closed for the <b>Fall 2017</b> semester. Check back next semester! </span>
         <div className="input__container input__container--half">
           <input
             ref="name"
@@ -240,38 +240,38 @@ export default class Index extends React.Component {
   _handleSubmit(e) {
     e.preventDefault();
 
-    const jsonPayload = {
-      Name: this.refs.name.value,
-      Email: this.refs.email.value,
-      Phone: this.state.enteredPhone,
-      Organization: this.refs.organization.value,
-      OrgDescription: this.refs.description.value,
-      Campus: this.state.selectedCampusType,
-      Type: this.state.selectedProjectType,
-      Deadline: this.state.selectedDate.format("MM/DD/YYYY"),
-      ProjectDescription: this.refs.project.value,
-      Additional: this.refs.questions.value
-    };
+    // const jsonPayload = {
+    //   Name: this.refs.name.value,
+    //   Email: this.refs.email.value,
+    //   Phone: this.state.enteredPhone,
+    //   Organization: this.refs.organization.value,
+    //   OrgDescription: this.refs.description.value,
+    //   Campus: this.state.selectedCampusType,
+    //   Type: this.state.selectedProjectType,
+    //   Deadline: this.state.selectedDate.format("MM/DD/YYYY"),
+    //   ProjectDescription: this.refs.project.value,
+    //   Additional: this.refs.questions.value
+    // };
 
-    if (!submissionIsValid(jsonPayload)) {
-      return;
-    }
+    // if (!submissionIsValid(jsonPayload)) {
+    //   return;
+    // }
 
-    this.setState({
-      sending: true,
-      request: jsonPayload
-    });
+    // this.setState({
+    //   sending: true,
+    //   request: jsonPayload
+    // });
 
-    request
-      .post('https://warm-lowlands-41134.herokuapp.com')
-      .send(jsonPayload)
-      .end((err, res) => {
-        if (err) {
-          this._handleSubmissionError(err);
-        } else {
-          this._handleSubmissionSuccess();
-        }
-    });
+    // request
+    //   .post('https://warm-lowlands-41134.herokuapp.com')
+    //   .send(jsonPayload)
+    //   .end((err, res) => {
+    //     if (err) {
+    //       this._handleSubmissionError(err);
+    //     } else {
+    //       this._handleSubmissionSuccess();
+    //     }
+    // });
   }
 
   _handleSubmissionError(error) {
